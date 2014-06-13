@@ -94,4 +94,10 @@
         <cuboid min="-38,24,221" max="-36,27,220"/>
     </portal>
 </portals>
+<mobs>
+    <filter>
+        <spawn>spawner</spawn>
+        <spawn>natural</spawn>
+    </filter>
+</mobs>
 </map>
