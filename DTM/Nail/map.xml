@@ -53,6 +53,14 @@
             <rectangle name="play-area" min="-40,-57" max="0,115"/>
         </negative>
     </apply>
+    <apply kit="speed">
+        <rectangle name="tunnel" min="-39,115" max="-35,214"/>
+    </apply>
+    <apply kit="no-speed">
+        <negative>
+            <region name="tunnel"/>
+        </negative>
+    </apply>
     <apply block="not-defenders">
         <rectangle name="invaders-camp" min="-40,-76" max="0,-57"/>
     </apply>
@@ -74,8 +82,9 @@
 <destroyables owner="defenders" name="Sponges" show-progress="true">
     <rectangle min="-21,34,113" max="-19,35,114"/>
 </destroyables>
+<time result="defenders">21m</time>
 <portals>
-    <portal x="@" y="@" z="@" yaw="0" protect="true">
+    <portal x="@-20" y="@16" z="@-55" yaw="0" protect="true">
         <cuboid min="-38,24,221" max="-36,27,220"/>
     </portal>
 </portals>
