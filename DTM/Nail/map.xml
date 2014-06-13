@@ -79,9 +79,15 @@
         <region name="defenders-delay"/>
     </destroyable>
 </destroyables>
-<destroyables owner="defenders" name="Sponges" show-progress="true">
+<destroyables owner="defenders" name="Sponges" materials="sponge" show-progress="true">
     <rectangle min="-21,34,113" max="-19,35,114"/>
 </destroyables>
+<itemremove>
+    <item>sponge</item>
+</itemremove>
+<gamerules>
+    <doDaylightCycle>true</doDaylightCycle>
+</gamerules>
 <time result="defenders">21m</time>
 <portals>
     <portal x="@-20" y="@16" z="@-55" yaw="0" protect="true">
