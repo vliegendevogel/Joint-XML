@@ -61,7 +61,7 @@
     </apply>
 </regions>
 <modes>
-    <mode after"1m" name="`eInvaders Released" material="stained glass:4"/>
+    <mode after="1m" name="`eInvaders Released" material="stained glass:4"/>
 </modes>
 <destroyables owner="Invaders" completion="0" mode-changes="true" show="false">
     <destroyable name="attackers-spawn">
