@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+    <name>Acheron</name>
+    <verions>2.1.0</verions>
+    <objective>Capture both the enemy wools</objective>
+
+    <authors>
+        <author contribution="Main Map Building and XML">Captain_Elliott</author>
+        <author contribution="Map builder and Aesthetics">titandigger</author>
+        <author contribution="Map Builder and Feedback">Ozillion</author>
+    </authors>
+
+    <contributors>
+        <contributor contribution="Feedback">Lexar500</contributor>
+        <contributor contribution="Feedback and Minior Building">pwnedrs</contributor>
+        <contributor contribution="Feedback">RedstoneOpenDoor</contributor>
+        <contributor contribution="Building spawn">cookey29</contributor>
+        <contributor contribution="V1 XML Fixing and tonnes of help and feeback">ItsMiiOlly</contributor>
+    </contributors>
+
+    <include src="tutorial.xml"/>
+    <tutorial>
+        <stage title="CTW">
+            <line>`rThis is a `aCapture the Wool `r` c(CTW) `rmap.</line>
+            <line>`rCapture both wools from the enemy side and bring them back.</line>
+        </stage>
+        <stage title="Wool Rooms">
+            <teleport>
+                <point yaw="90">143,9,1086</point>
+            </teleport>
+            <line>This is a wool room.</line>
+            <line>You must come here in order to retrieve the wool.</line>
+            <line>The wool room has two floors, each floor you can exit.</line>
+            <line>Wool rooms also contain some nice loot!</line>
+        </stage>
+        <stage title="Victory Monument">
+            <teleport>
+                <point yaw="-180">182,9,987</point>
+            </teleport>
+            <line>Place the wools you retrieved from the wool room here.</line>
+        </stage>
+    </tutorial>
+
+    <teams>
+        <team color="blue" max="45" max-overfill="50">Blue Team</team>
+        <team color="green" max="45" max-overfill="50">Green Team</team>
+    </teams>
+
+    <kits>
+        <kit name="spawn">
+            <item slot="0">iron sword</item>
+            <item slot="1" enchantment="arrow infinite:1">bow</item>
+            <item slot="2">diamond pickaxe</item>
+            <item slot="3" enchantment="durability:1;dig speed:1">iron shovel</item>
+            <item slot="4" enchantment="durability:1;dig speed:1">iron axe</item>
+            <item slot="5" amount="32">spruce log</item>
+            <item slot="6" amount="64">glass</item>
+            <item slot="7" amount="64" damage="5">159</item><!--Stained clay-->
+            <item slot="8" amount="64">steak</item>
+            <item slot="9">arrow</item>
+        </kit>
+        <kit name="green" parents="spawn">
+            <helmet color="667f33">leather helmet</helmet>
+        </kit>
+        <kit name="purple" parents="spawn">
+            <helmet color="7f3fb2">leather helmet</helmet>
+        </kit>
+    </kits>
+
+    <spawns>
+        <spawn team="blue" yaw="-180" safe="true">
+            <cuboid min="180,9,1270" max="185,11,1275"/>
+        </spawn>
+        <spawn team="green" yaw="0" safe="true">
+            <cuboid min="185,9,995" max="180,11,990"/>
+        </spawn>
+        <default yaw="90">
+            <cylinder base="291,61,1132" radius="3" height="0"/>
+        </default>
+    </spawns>
+
+    <filters>
+        <filter name="only-blue">
+            <team>blue</team>
+        </filter>
+        <filter name="only-green">
+            <team>green</team>
+        </filter>
+        <filter name="only-cobwebs">
+            <block>cobweb</block>
+        </filter>
+        <filter name="only-iron">
+            <block>iron block</block>
+        </filter>
+        <filter name="no-void" parents="allow-all">
+            <deny><void/></deny>
+        </filter>
+    </filters>
+    <regions>
+         <union name="woolrooms">
+            <cylinder name="green" base="129,9,1178" radius="10" height="37"/>
+            <cylinder name="pink" base="235.5,19,1178.5" radius="10" height="37"/>
+            <cylinder name="purple" base="129.5,19,1086" radius="10" height="37"/>
+            <cylinder name="orange" base="235.5,19,1086.5" radius="10" height="37"/>
+        </union>
+
+        <union name="jump-pads">
+            <!--Green-->
+            <block>176,10,1057</block>
+            <block>176,10,1067</block>
+            <block>188,10,1067</block>
+            <block>188,10,1057</block>
+            <block>211,9,1079</block>
+            <block>153,9,1079</block>
+            <!--blue-->
+            <block>179,10,1207</block>
+            <block>176,10,1197</block>
+            <block>188,10,1197</block>
+            <block>188,10,1207</block>
+            <block>211,9,1185</block>
+            <block>153,9,1185</block>
+        </union>
+
+        <apply block-place="no-void" message="You may not place blocks here!">
+            <rectangle min="250,1036" max="115,1229"/>
+        </apply>
+
+        <apply enter="only-blue" message="You may not enter your won wool room!">
+            <region name="orange"/>
+            <region name="purple"/>
+        </apply>
+
+        <apply enter="only-green" message="You may not enter your won wool room!">
+            <region name="pink"/>
+            <region name="green"/>
+        </apply>
+
+        <apply block="only-cobwebs" message="You may not edit the wool room!">
+            <region name="woolrooms"/>
+        </apply>
+
+        <apply block="only-iron" message="You may only break iron in the spawns!">
+            <cuboid name="green-spawn" min="144,1,980" max="221,31,1107"/>
+            <cuboid name="blue-spawn" min="221,1,1285" max="144,31,1257"/>
+        </apply>
+
+        <apply block="deny-blocks" message="You may not edit the portals!">
+            <cuboid name="blue-main" min="186,9,1228" max="179,14,1231"/>
+            <cuboid name="green-main" min="179,9,1037" max="186,14,1034"/>
+        </apply>
+
+        <apply block="deny-blocks" enter="only-blue" message="You may not edit the shoots!">
+            <cuboid name="blue-1" min="187,8,1296" max="190,22,1209"/>
+            <cuboid name="blue-2" min="178,8,1209" max="175,22,1206"/>
+            <cuboid name="blue-3" min="178,8,1199" max="175,22,1196"/>
+            <cuboid name="blue-4" min="187,8,1196" max="190,22,1199"/>
+            <cuboid name="blue-purple" min="210,9,1187" max="213,22,1184"/>
+            <cuboid name="blue-green" min="152,9,1184" max="155,22,1187"/>
+        </apply>
+
+        <apply block="deny-blocks" enter="only-green" message="You may not edit the shoot!">
+            <cuboid name="green-1" min="187,8,1056" max="190,22,1059"/>
+            <cuboid name="green-2" min="178,8,1956" max="175,22,1058"/>
+            <cuboid name="green-3" min="178,8,1066" max="175,22,1069"/>
+            <cuboid name="green-4" min="187,8,1069" max="190,22,1066"/>
+            <cuboid name="green-pink" min="155,9,1078" max="152,22,1081"/>
+            <cuboid name="green-orange" min="213,9,1081" max="210,22,1078"/>
+        </apply>
+
+        <apply velocity="@0.0,2.0,0.0">
+            <region name="jump-pads"/>
+        </apply>
+
+    </regions>
+
+    <portals>
+        <portal z="36" filter="only-green"> <!--Green Spawn to Green main-->
+            <block>182,9,1001</block>
+        </portal>
+        <portal z="-35" filter="only-green"> <!--Green main to Green Spawn-->
+            <cuboid min="181,9,1035" max="184,11,1034"/>
+        </portal>
+
+        <portal z="37" filter="only-blue"> <!--blue spawn to blue main-->
+            <block>182,9,1263</block>
+        </portal>
+
+        <portal z="-35" filter="only-blue"> <!--Blue main to spawn-->
+            <cuboid min="184,9,1230" max="181,11,1231"/>
+        </portal>
+    </portals>
+
+    <wools>
+        <wools team="green">
+            <wool color="lime">
+                <block>181,10,983</block>
+            </wool>
+            <wool color="pink">
+                <block>183,10,983</block>
+            </wool>
+        </wools>
+        <wools team="blue">
+            <wool color="orange">
+                <block>183,10,1281</block>
+            </wool>
+            <wool color="purple">
+                <block>181,10,1281</block>
+            </wool>
+        </wools>
+    </wools>
+    <maxbuildheight>37</maxbuildheight>
+    <itemremove>
+        <item>log</item>
+        <item>glass</item>
+        <item>stained clay</item>
+        <item>cookec beef</item>
+        <item>leather helmet</item>
+        <item>sign</item>
+        <item>redstone block</item>
+        <item>cobwebs</item>
+        <item>stone slab</item>
+        <item>lily pad</item>
+        <item>refstone lamp</item>
+        <item>cobblestone wall</item>
+        <item>glowstone</item>
+        <item>redstone torch</item>
+        <item>ladder</item>
+    </itemremove>
+    <toolrepair>
+        <tool>bow</tool>
+        <tool>iron spade</tool>
+        <tool>iron axe</tool>
+        <tool>iron pickaxe</tool>
+        <tool>arrow</tool>
+        <tool>iron sword</tool>
+    </toolrepair>
+    <timelock>on</timelock>
+</map>
