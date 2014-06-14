@@ -42,13 +42,16 @@
     <filter name="only-defenders">
         <team>defenders</team>
     </filter>
+    <filter name="only-plane">
+        <block>thin glass</block>
+    </filter>
 </filters>
 <regions>
     <apply block="spawn-control">
         <cuboid name="defenders-delay" min="-39,26,214" max="-35,24,215"/>
         <cuboid name="invaders-delay" min="-23,22,-72" max="-17,23,-66"/>
     </apply>
-    <apply block="deny-blocks">
+    <apply block="only-plane" block="deny-world" message="You may not edit outside of the map!">
         <negative>
             <rectangle name="play-area" min="-40,-57" max="0,115"/>
         </negative>
@@ -61,17 +64,17 @@
             <region name="tunnel"/>
         </negative>
     </apply>
-    <apply block="not-defenders">
+    <apply block="not-defenders" message="Only invaders may use this camp!">
         <rectangle name="invaders-camp" min="-40,-76" max="0,-57"/>
     </apply>
-    <apply block="deny-blocks" enter="only-defenders">
+    <apply block="deny-blocks" enter="only-defenders" message="You may not enter the defenders spawn!">
         <cuboid min="-39,26,106" max="-32,31,114"/>
     </apply>
 </regions>
 <modes>
     <mode after="1m" name="`eInvaders Released" material="stained glass:4"/>
 </modes>
-<destroyables owner="Invaders" completion="0" mode-changes="true" show="false">
+<destroyables owner="Invaders" materials="stained glass:4;stained glass:10" completion="0" mode-changes="true" show="false">
     <destroyable name="attackers-spawn">
         <region name="invaders-delay"/>
     </destroyable>
@@ -79,6 +82,9 @@
         <region name="defenders-delay"/>
     </destroyable>
 </destroyables>
+<destoryables owner="defenders" materials="air;stained glass:4" completion="0" mode-changes="true" show="false">
+    <cuboid name="starting-portal" min="-38,25,219" max="-36,26,220"/>
+</destoryables>
 <destroyables owner="defenders" name="Sponges" materials="sponge" show-progress="true">
     <rectangle min="-21,34,113" max="-19,35,114"/>
 </destroyables>
@@ -90,7 +96,7 @@
 </gamerules>
 <time result="defenders">21m</time>
 <portals>
-    <portal x="@-20" y="@16" z="@-55" yaw="0" protect="true">
+    <portal x="@-27.5" y="@16" z="@-53.5" yaw="0" protect="true">
         <cuboid min="-38,24,221" max="-36,27,220"/>
     </portal>
 </portals>
@@ -100,4 +106,5 @@
         <spawn>natural</spawn>
     </filter>
 </mobs>
+<maxbuildheight>67</maxbuildheight>
 </map>
