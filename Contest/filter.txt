@@ -1,0 +1,7 @@
+Remove this when you add a map in.
+
+To add in a map in the title above type:
+<map name>/map.xml
+
+
+add the maps .png, level.dat and regions folder also in here
