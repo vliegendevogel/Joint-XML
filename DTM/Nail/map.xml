@@ -11,6 +11,10 @@
     <author>xSugoix</author>
     <author>Jikosh</author>
 </authors>
+<contributors>
+    <contributor contribution="Builder">Block_Fortress</contributor>
+    <contributor>parkervcp</contributor>
+</contributors>
 <teams>
     <team color="dark red" max="4" max-overfill="6">Invaders</team>
     <team color="blue" max="4" max-ovefill="6">Defenders</team>
