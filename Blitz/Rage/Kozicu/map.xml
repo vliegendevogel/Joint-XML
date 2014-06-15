@@ -73,6 +73,15 @@
 		<apply block="only-leaves">
 			<rectangle name="map" min="-oo,-oo" max="oo,oo"/>
 		</apply>
+		
+		<apply velocity="@0.0,20.0,0.0">
+		        <cuboid min="1573,11,-986" max="1571,12,-983"/>
+		        <cuboid min="1574,11,-983" max="1576,12,-986"/>
+		</apply>
+		
+		<apply velocity="@0.0,10.0,0.0">
+		        <cuboid min="1576,11,-935" max="1571,12,-938"/>
+		</apply>
 	</regions>
 	<killreward>
 		<item amount="1">arrow</item>
