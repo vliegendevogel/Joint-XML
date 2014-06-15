@@ -7,6 +7,7 @@
 </objective>
 <authors>
     <author>Rixiot</author>
+    <author>Whiskey Brigade</author>
 </authors>
 <teams>
     <team color="dark red" max="4" max-overfill="6">Invaders</team>
@@ -106,5 +107,6 @@
         <spawn>natural</spawn>
     </filter>
 </mobs>
+<difficulty>3</difficulty>
 <maxbuildheight>67</maxbuildheight>
 </map>
