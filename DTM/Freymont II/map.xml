@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.3.3">
 <name>Freymont II</name>
-<version>1.0.0</version>
+<version>1.0.1</version>
 <objective>
     Destroy the enemy teams obsidian monument!
 </objective>
@@ -9,6 +9,7 @@
     <auhtor>Avaleer</auhtor>
 </authors>
 <contributors>
+    <contributor contribution="Spawners">_IQ</contributor>
     <contributior contribution="XML">orky48</contributior>
 </contributors>
 <teams>
