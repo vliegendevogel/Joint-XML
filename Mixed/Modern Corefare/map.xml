@@ -49,9 +49,35 @@
             </any>
         </not>
     </filter>
+    <filter name="deny-void">
+        <deny>
+            <void/>
+        </deny>
+    </filter>
+    <filter name="only-chest">
+        <block>chest</block>
+    </filter>
 </filters>
 <regions>
-    
+    <apply block="deny-void" message="You may not edit the void!">
+        <negative>
+            <rectangle min="1132,-293" max="1194,-184"/>
+        </negative>
+    </apply>
+    <apply block="deny-blocks" message="You may not build below Y = 5">
+        <cuboid min="-oo,-oo,-oo" max="oo,5,oo"/>
+    </apply>
+    <union name="water-cores">
+        <rectangle name="blue-core" min="1131,-244" max="1143,-232"/>
+        <rectangle name="red-core" min="1184,-244" max="1195,-232"/>
+    </union>
+    <apply block="deny-water" message="You may not place water near the core!">
+        <region name="water-cores"/>
+    </apply>
+    <apply block="only chests" message="You may only break chests in spawn">
+        <rectangle name="blue-spawn" min="1101,-249" max="1114,-228"/>
+        <rectangle name="red-spawn" min="1213,-249" max="1226,-227"/>
+    </apply>
 </regions>
 <cores material="obsidian" leak="4" mode-changes="true">
     <core team="blue">
