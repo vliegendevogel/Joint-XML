@@ -88,7 +88,18 @@
     </core>
 </cores>
 <destroyables materials="emerald block" show-progress="true">
-    <destroyable owner="blue" name=""
+    <destroyable owner="blue" name="Left Monument">
+        <cuboid min="1126,155,-206" max="1129,160,-203"/>
+    </destroyable>
+    <destrouable owner="blue" name="Right Monument">
+        <cuboid min="1126,155,-267" max="1129,160,-273"/>
+    </destrouable>
+    <destroyable owner="red" name="Left Monument">
+        <cuboid min="1198,155,-273" max="1201,160,-270"/>
+    </destroyable>
+    <destroyable owner="red" name="Right Monument">
+        <cuboid min="1198,155,-206" max="1201,160,-203"/>
+    </destroyable>
 </destroyables>
 <modes>
     <mode after="15m" material="gold block" name="`eGold Core Mode"/>
