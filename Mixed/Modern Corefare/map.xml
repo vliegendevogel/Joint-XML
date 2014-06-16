@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<map proto=""1.3.3>
+<name>Modern Corefare</name>
+<version>1.0.0</version>
+<objective>Leake the lava from the enemy teams core</objective>
+<authors>
+    <author>PhoenixMatt</author>
+</authors>
+<contributors>
+    <contributor contribution="Moral Support">iLifting</contributor>
+    <contributor contribution="XML">orky48</contributor>
+    <contributor contribution="XML">Captain_Elliott</contributor>
+</contributors>
+<teams>
+    <team color="blue" max="12" max-overfill="16">Blue Team</team>
+    <team color="red" max="12" max-overfill="16">Red Team</team>
+</teams>
+
+</map>
