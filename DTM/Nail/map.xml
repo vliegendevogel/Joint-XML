@@ -58,7 +58,7 @@
         <cuboid name="defenders-delay" min="-39,26,214" max="-35,24,215"/>
         <cuboid name="invaders-delay" min="-23,22,-72" max="-17,23,-66"/>
     </apply>
-    <apply block="only-plane" block="deny-world" message="You may not edit outside of the map!">
+    <apply block="only-plane" message="You may not edit the outside of the map!">
         <negative>
             <rectangle name="play-area" min="-40,-57" max="0,115"/>
         </negative>
