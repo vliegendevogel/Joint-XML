@@ -87,11 +87,19 @@
         <sphere origin="1187,157,-238" radius="5"/>
     </core>
 </cores>
+<destroyables materials="emerald block" show-progress="true">
+    <destroyable owner="blue" name=""
+</destroyables>
 <modes>
     <mode after="15m" material="gold block" name="`eGold Core Mode"/>
 </modes>
 <itemremove>
     <item>obsidian</item>
     <item>gold block</item>
+    <item>stained clay</item>
+    <item>stone</item>
+    <item>smooth brick:2</item>
+    <item>iron fence</item>
+    <item>step</item>
 </itemremove>
 </map>
