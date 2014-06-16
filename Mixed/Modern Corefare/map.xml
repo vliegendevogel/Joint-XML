@@ -15,5 +15,13 @@
     <team color="blue" max="12" max-overfill="16">Blue Team</team>
     <team color="red" max="12" max-overfill="16">Red Team</team>
 </teams>
+<spawns>
+    <spawn team="blue" yaw="-90">
+        <cuboid min=
+    </spawn>
+    <spawn team="red" yaw="90">
+        <cuboid min="-1249,153,-239" max="1252,153,-237"/>
+    </spawn>
+</spawns>
 
 </map>
