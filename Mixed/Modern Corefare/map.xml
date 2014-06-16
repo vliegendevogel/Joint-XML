@@ -41,10 +41,29 @@
             </all>
         </not>
     </filter>
+    <filter name="deny-water">
+        <not>
+            <any>
+                <block>water</block>
+                <block>stationary water</block>
+            </any>
+        </not>
+    </filter>
 </filters>
 <regions>
     
 </regions>
+<cores material="obsidian" leak="4" mode-changes="true">
+    <core team="blue">
+        <sphere origin="1137,157,-239" radius="5"/>
+    </core>
+    <core team="red">
+        <sphere origin="1187,157,-238" radius="5"/>
+    </core>
+</cores>
+<modes>
+    <mode after="15m" material="gold block" name="`eGold Core Mode"/>
+</modes>
 <itemremove>
     <item>obsidian</item>
     <item>gold block</item>
