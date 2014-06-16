@@ -17,11 +17,36 @@
 </teams>
 <spawns>
     <spawn team="blue" yaw="-90">
-        <cuboid min=
+        <cuboid min="1078,153,-237" max="1075,153,-239"/>
     </spawn>
     <spawn team="red" yaw="90">
-        <cuboid min="-1249,153,-239" max="1252,153,-237"/>
+        <cuboid min="1249,153,-239" max="1252,153,-237"/>
     </spawn>
+    <default yaw="180">
+        <cuboid min="1162,195,-167" ma="1165,195,-164"/>
+    </default>
 </spawns>
-
+<filters>
+    <filter name="deny-core-world">
+        <not>
+            <all>
+                <any>
+                    <block>obsidian</block>
+                    <block>gold block</block>
+                </any>
+                <any>
+                    <filter name="allow-world"/>
+                    <filter name="deny-all"/>
+                </any>
+            </all>
+        </not>
+    </filter>
+</filters>
+<regions>
+    
+</regions>
+<itemremove>
+    <item>obsidian</item>
+    <item>gold block</item>
+</itemremove>
 </map>
