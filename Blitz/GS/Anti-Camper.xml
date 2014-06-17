@@ -1,3 +1,37 @@
-<kit name="wither-affect">
+<kit name="wither">
     <potion duration="oo" amplifier="1">wither</potion>
 </kit>
+<kit name="anti-wither" force="true">
+    <potion duration="0" amplifier="1">wither</potion>
+</kit>
+<!--For Frozen Palace -->
+<apply kit="wither" message="`l`kGhY4`rYou may not reach in accesible places read /map'r'l'kGhY4">
+    <cuboid name="camping-zone" min="-729,47,437" max="-740,70,396"/>
+</apply>
+<apply kit="anti-wither">
+    <negative>
+        <region name="camping-zone"/>
+    </negative>
+</apply>
+
+<!-- Splinter -->
+<apply kit="wither" message="`l`kGhY4`rYou may not reach in accesible places read /map'r'l'kGhY4">
+    <cylinder name="camping-zone" center="o.5,16,0.5" radius="5" height="40"/>
+</apply>
+<apply kit="anti-wither">
+    <negative>
+        <region name="camping-zone"/>
+    </negative>
+</apply>
+<!-- For Gs: Blocks -->
+<apply kit="wither" message="`l`kGhY4`rYou may not reach in accesible places read /map'r'l'kGhY4">
+    <union name="chests">
+        <cuboid min="-63,30,49" max="-49,70,63"/>
+        <cuboid min="-15,30,1" max="-1,70,15"/>
+    </union>
+</apply>
+<apply kit="anti-wither">
+    <negative>
+        <region name="camping-zone"/>
+    </negative>
+</apply>
