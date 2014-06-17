@@ -16,7 +16,7 @@
 
 <!-- Splinter -->
 <apply kit="wither" message="`l`kGhY4`rYou may not reach in accesible places read /map'r'l'kGhY4">
-    <cylinder name="camping-zone" center="o.5,16,0.5" radius="5" height="40"/>
+    <cylinder name="camping-zone" center="0.5,16,0.5" radius="5" height="40"/>
 </apply>
 <apply kit="anti-wither">
     <negative>
