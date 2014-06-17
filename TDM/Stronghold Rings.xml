@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<include src="tutorial.xml"/>
+<name>Stronghold Rings</name> <!-- The map's name, shouldn't be too long -->
+<version>Alpha 1.0.0</version> <!-- The map version -->
+<objective>This is a Team Deathmatch, the team with the least amount of kills after 600 seconds wins!</objective>
+<!-- Major map authors. -->
+<authors>
+    <author>NeonNinja96</author> <!-- The creator of the map -->
+    <author contribution="Almost everything">NeonNinja96</author>
+</authors>
+ 
+<!-- People that contributed in some way to the map. -->
+<contributors>
+    <contributor contribution="A contribution">aHelper</contributor>
+</contributors>
+ 
+<!-- Map modules, i.e. objectives, regions, spawns. -->
+<tutorial>
+    <stage title="Stronghold Rings">
+        <message>
+            <line>`rThis map is a `a`lTeam Deathmatch `r(TDM) map</line>
+            <line>The objective is to be the team with the least amount of kills after 600 seconds.</line>
+        </message>
+        <teleport>
+            <point yaw="90" pitch="50"943,13,837</point>
+        </teleport>
+    </stage>
+    <!-- next stages -->
+        <stage title="Spawn Point">
+                <message>
+                        <line>This is the Purple Team's Spawn Point, when you die, or join for the first time (Assuming you are on the Purple Team), you go here. Yellow also goes to their respective Spawn Point.</line>
+                </message>
+                <teleport>
+                        <point yaw="0" pitch"50"1021,6,759</point>
+                </teleport>
+        </stage>
+        <stage title="The Battlefield">
+                <message>
+                        <line>This is the battlefield. There is a "Control Point" located on a raised platform in the center of the map. There are highly fortified archer points to the left and right, as well as points of cover and hazards throughout</line>
+                </message>
+                <teleport>
+                        <point yaw="0" pitch="0"1021,92,826</point>
+                </teleport>
+        </stage>
+        <stage title="Kill Rewards">
+                <message>
+                        <line>When you kill an enemy, you are rewarded with a Bottle of Enchanting, which you can use at any time.</line>
+                        <line>Beware! If an enemy kills you, then they get ALL of your Bottles of Enchanting that you haven't used!</line>
+                </message>
+        </stage>
+        <stage title="Enchanting">
+                <message>
+                        <line>Atop the Control Point lies a single enchanting table. You can use this to enchant the books in your inventory.</line>
+                        <line>Beware! There will be lots of fighting for the table!</line>
+                <message>
+                <teleport>
+                        <point yaw="56" pitch"50"1029,28,831</point>
+                </teleport>
+        </stage>
+        <stage title="Combining your Enchantments">
+                <message>
+                        <line>Should you not want to risk enchanting your precious bow with a poor enchantment, there is an anvil located at your spawn point.</line>
+                </message>
+                <teleport>
+                        <point yaw="-35" pitch="50"1022,6,762</pitch>
+                </teleport>
+        </stage>
+</tutorial>
+<score>
+    <!-- Time till the match ends in seconds -->
+    <time>600</time>
+ 
+    <!-- Game ends when a team reaches this score, defaults to -1 i.e. no limit. -->
+    <limit>-1</limit>
+</score>
+<teams>
+   <team color="Purple" max="16" max-overfill="24" overhead-color="Purple">Purple Team</team>
+   <team color="Yellow" max="16" max-overfill="24" overhead-color="Yellow">Yellow Team</team>
+</teams>
+<kits>
+    <kit name="spawn" force="true">
+        <item slot="0">iron sword</item>
+                <item slot="1">bow</item>
+                <item slot="2" amount="64">arrow</item>
+                <item slot="3" amount="64">arrow</item>
+                <item slot="4" damage="8193">potion</item>
+                <item slot="5" damage="8201">potion</item>
+                <item slot="6" damage="8197">potion</item>
+        <item slot="8" amount="32">bread</item>
+        <potion duration="5" amplifier="1">heal</potion>
+    </kit>
+    <kit name="Purple" parents="spawn">
+        <helmet color="7F3FB2">leather helmet</helmet>
+                <chestplate>iron chestplate</chestplate>
+                <leggings>iron leggings</leggings>
+                <boots>iron boots</boots>
+    </kit>
+    <kit name="Yellow" parents="spawn">
+        <helmet color="E5E533">leather helmet</helmet>
+                <chestplate>iron chestplate</chestplate>
+                <leggings>iron leggings</leggings>
+                <boots>iron boots</boots>
+    </kit>
+</kits>
+<toolrepair>
+    <tool>iron sword</tool>
+    <tool>bow</tool>
+</toolrepair>
+<itemremove>
+    <item>arrow</item>
+    <item>leather helmet</item>
+    <item>iron leggings</item>
+    <item>iron chestplate</item>
+        <item>iron boots</item>
+</itemremove>
+<killreward>
+    <item amount="2">Bottle of Enchanting</item>
+</killreward>
+<difficulty>3</difficulty>
+<filters>
+    <filter name="Nope.avi">
+        <!-- Filter elements -->
+                deny-blocks
+               
+    </filter>
+ 
+    <!-- More filters-->
+</filters>
+<spawns>
+    <spawn team="Purple" kit="Purple" yaw="0">
+        <cuboid min="1022,6,758" max="1023,6,759"/>
+    </spawn>
+    <spawn team="Yellow" kit="Yellow" yaw="-90">
+        <cuboid min="1022,6,917" max="1023,6,918"/>
+    </spawn>
+    <default yaw="0">
+        <cuboid min="1094,46,838" max="1095,47,839"/>
+    </default>
+</spawns>
+ 
+</map>
