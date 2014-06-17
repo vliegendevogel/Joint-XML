@@ -1,0 +1,14 @@
+<control-points capture-players="exclusive" permanent="true" show-progress="true" neutral-state="false">
+    <control-point name="Name" capture-time="Time[s]" initial-owner="">
+        <capture-region>
+            <cylinder base="x,y,z" radius="r" height="h"/>
+        </capture-region>
+        <progress-display-region>
+            <cylinder base="x,y,z" radius="r" height="h"/>
+        </progress-display-region>
+        <owner-display-region>
+            <cylinder base="x,y,z" radius="r" height="h"/>
+        </owner-display-region>
+    </control-point>
+    <!-- Repeated for each hill ect. -->
+</control-points>
