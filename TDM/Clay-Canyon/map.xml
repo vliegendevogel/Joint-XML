@@ -91,10 +91,10 @@
 		<rectangle min="-oo,-oo" max="oo,oo"/>
 	</apply>
 	<apply enter="only-red">
-		<cuboid name="red-spawn" min="" max=""/>
+		<cuboid name="red-spawn" min="-31,5,53" max="-36,10,60"/>
 	</apply>
 	<apply enter="only-blue">
-		<cuboid name="blue-spawn" min="" max=""/>
+		<cuboid name="blue-spawn" min="-36,5,-17" max="-31,10,-24"/>
 	</apply>
 </regions>
 <killreward>
