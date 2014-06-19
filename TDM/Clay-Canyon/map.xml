@@ -1,6 +1,6 @@
-<map proto="1.3.2">
+<map proto="1.3.3">
 <name>Clay Canyon</name>
-<version>1.0.0</version>
+<version>1.4.4</version>
 <objective>
     Be the team with the most points after 10 minutes
 </objective>
@@ -10,7 +10,7 @@
 </authors>
 <contributors>
 	<contributor contributation="XML">Captain_Elliott</contributor>
-	<contributor>ravi60</contributor>
+	<contributor contributation="server and feedback">ravi60</contributor>
 </contributors>
 <include src="tutorial.xml"/>
 <tutorial>
@@ -57,21 +57,23 @@
 </kits>
 <spawns>
 	<spawn team="red" kit="red" yaw="0">
-		<cuboid min="458,116,495" max="460,118,497"/>
+		<cuboid min="-35,5,51" max="-32,5,54"/>
 	</spawn>	
 	<spawn team="blue" kit="blue" yaw="-180">
-		<cuboid min="460,116,428" max="458,118,426"/>
+		<cuboid min="-32,5,-15" max="-35,5,-18"/>
 	</spawn>
 	<default yaw="90">
-		<cylinder base="508,171,462" height="1" radius="2"/>
+		<cylinder base="14,60,16" height="0" radius="2"/>
 	</default>
 </spawns>
 <score>
 	<box value="3" team="red" filter="only-red">
-    	<rectangle name="red-spawn" min="447,406" max="479,408"/>
+    		<cuboid min="-16,14,-38" max="-13,14,-35"/>
+    		<cuboid min="-52,8,-50" max="-49,8,-47"/>
 	</box>
 	<box value="3" team="blue" filter="only-blue">
-		<rectangle name="blue-spawn" min="477,515" max="479,517"/>
+		<cuboid min="-13,14,74" max="-16,14,71"/>
+		<cuboid min="-49,9,85" max="-52,8,83"/>
 	</box>
 	<time>600</time>
 	<limit>-1</limit>
@@ -89,10 +91,10 @@
 		<rectangle min="-oo,-oo" max="oo,oo"/>
 	</apply>
 	<apply enter="only-red">
-		<region name="red-spawn"/>
+		<cuboid name="red-spawn" min="" max=""/>
 	</apply>
 	<apply enter="only-blue">
-		<region name="blue-spawn"/>
+		<cuboid name="blue-spawn" min="" max=""/>
 	</apply>
 </regions>
 <killreward>
