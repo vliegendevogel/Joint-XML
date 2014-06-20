@@ -21,21 +21,19 @@
 </teams>
  
 <spawns>
-    <spawn team="red" kit="red">
-        <point yaw="-2.6">
-            <cylinder base="-746,25,-626" height="0" radius="1"/>
-        </point>
+    <spawn team="red" kit="red" safe="true">
+            <cuboid min="-746,25,-626" max="-743,25,-621"/>
     </spawn>
-    <spawn team="blue" kit="blue">
-        <point yaw="172">
-            <cylinder base="-746,25,-500" height="0" radius="1"/>
-        </point>
+    <spawn team="blue" kit="blue" safe="true">
+            <cuboid min="-744,25,-499" max="-747,25,-504"/>
     </spawn>
-    <default yaw="-90"><cylinder base="-799, 46,-563" radius="4" height="0"/><default>
+    <default yaw="-90">
+       <cylinder base="-799, 46,-563" radius="4" height="0"/>
+    <default>
 </spawns>
  
 <kits>
-    <kit name="spawn">
+    <kit name="spawn" force="true">
         <item slot="0">stone sword</item>
         <item slot="1" enchantment="arrow infinite:1">bow</item>
         <item slot="28" amount="1">arrow</item>
@@ -63,23 +61,23 @@
 </kits>
 
 <destroyables>
-<destroyables name="Monument A" completion="100%" materials="obsidian">
-    <destroyable owner="blue">
-        <cuboid min="-723,8,-485" max="-723,9,-485"/>
-    </destroyable>
-    <destroyable owner="red">
-        <cuboid min="-768,8,-641" max="-768,9,-641"/>
-    </destroyable>
-</destroyables>
- 
-<destroyables name="Monument B" completion="100%" materials="obsidian">
-    <destroyable owner="blue">
-        <cuboid min="-767,8,-485" max="-768,9,-485"/>
-    </destroyable>
-    <destroyable owner="red">
-        <cuboid min="-723,8,-641" max="-723,9,-641"/>
-    </destroyable>
-</destroyables>
+ <destroyables name="Monument A" completion="100%" materials="obsidian">
+     <destroyable owner="blue">
+         <cuboid min="-723,8,-485" max="-722,9,-484"/>
+     </destroyable>
+     <destroyable owner="red">
+         <cuboid min="-768,8,-641" max="-767,9,-640"/>
+     </destroyable>
+ </destroyables>
+  
+ <destroyables name="Monument B" completion="100%" materials="obsidian">
+     <destroyable owner="blue">
+         <cuboid min="-767,8,-485" max="-768,9,-484"/>
+     </destroyable>
+     <destroyable owner="red">
+         <cuboid min="-723,8,-641" max="-722,9,-640"/>
+     </destroyable>
+ </destroyables>
 </destroyables>
  
 <toolrepair>
