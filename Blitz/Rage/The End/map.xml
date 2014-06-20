@@ -33,7 +33,7 @@
     </kit>
 </kits>
 <spawns>
-    <spawn team="pruple" kit="purple" yaw="-90">
+    <spawn team="purple" kit="purple" yaw="-90">
         <cuboid min="706,14,404" max="709,14,407"/>
     </spawn>
     <spawn team="black" kit="black" yaw="90">
