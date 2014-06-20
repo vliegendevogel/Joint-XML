@@ -120,4 +120,25 @@
         <cuboid min="951,92,442" max="952,94,443"/>
     </portal>
 </portals>
+<itemremove>
+    <item>redstone wire</item>
+    <item>TNT</item>
+    <item>diode</item>
+    <item>water bucket</item>
+    <item>stained clay</item>
+    <item>golden carrot</item>
+    <item>redstone torch on</item>
+    <item>stone button</item>
+    <item>arrow</item>
+    <item>leather helmet</item>
+    <item>chainmail chestplate</item>
+    <item>iron leggings</item>
+    <item>leather boots</item>
+    <item>wood plate</item>
+</itemremove>
+<toolrepair>
+    <tool>iron sword</tool>
+    <tool>bow</tool>
+    <tool>iron pickaxe</tool>
+</toolrepair>
 </map>
