@@ -38,18 +38,18 @@
     <kit name="blue" parents="spawn">
         <item slot="6" amount="64" damage="11">stained clay</item>
         <item slot="33" amount="64" damage="11">stained clay</item>
-        <helmet color="334CB2">leather helmet</helmet>
-        <chestplate enchantment="protection explosions:3">chainmail chestplate</chestplate>
-        <leggings>iron leggings</leggings>
-        <boots color="334CB2" enchantment="protection fall:1">leather boots</boots>
+        <helmet color="334CB2" damage="-3000">leather helmet</helmet>
+        <chestplate enchantment="protection explosions:3" damage="-3000">chainmail chestplate</chestplate>
+        <leggings damage="-3000">iron leggings</leggings>
+        <boots color="334CB2" enchantment="protection fall:1" damage="-3000">leather boots</boots>
     </kit>
     <kit name="green" parents="spawn">
         <item slot="6" amount="64" damage="5">stained clay</item>
         <item slot="33" amount="64" damage="5">stained clay</item>
-        <helmet color="667F33">leather helmet</helmet>
+        <helmet color="667F33" damage="-3000">leather helmet</helmet>
         <chestplate enchantment="protection explosions:3">chainmail chestplate</chestplate>
-        <leggings>iron leggings</leggings>
-        <boots color="667F33" enchantment="protection fall:1">leather boots</boots>
+        <leggings damage="-3000">iron leggings</leggings>
+        <boots color="667F33" enchantment="protection fall:1" damage="-3000">leather boots</boots>
     </kit>
     <kit name="health">
         <potion duration="8" amplifier="1">heal</potion>
