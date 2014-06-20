@@ -6,10 +6,11 @@
  
 <authors>
     <author>zeldcat</author>
+</authors>
    
 <contributors>
     <contributor contribution="Feedback and help with ideas">thsjig</contributor>
-    <contributor contribution="Detailing & aesthetics">Graywolf6533</contributor>
+    <contributor contribution="Detailing + aesthetics">Graywolf6533</contributor>
 </contributors>
  
 <include src="tutorial.xml"/>
@@ -60,7 +61,8 @@
         <item slot="5" amount="64">blue stained clay</item>
     </kit>
 </kits>
- 
+
+<destroyables>
 <destroyables name="Monument A" completion="100%" materials="obsidian">
     <destroyable owner="blue">
         <cuboid min="-723,8,-485" max="-723,9,-485"/>
@@ -78,13 +80,14 @@
         <cuboid min="-723,8,-641" max="-723,9,-641"/>
     </destroyable>
 </destroyables>
+</destroyables>
  
 <toolrepair>
     <tool>stone sword</tool>
     <tool>diamond pickaxe</tool>
     <tool>stone axe</tool>
     <tool>bow</tool>
-    <tool>wooden shovel</tool>
+    <tool>wood spade</tool>
     <tool>arrow</tool>
 </toolrepair>
  
@@ -94,14 +97,14 @@
     <item>leather leggings</item>
     <item>leather boots</item>
     <item>wood</item>
-    <item>blue stained clay</item>
-    <item>red stained clay</item>
+    <item>stained clay:11</item>
+    <item>stained clay:14</item>
     <item>obsidian</item>
     <item>bread</item>
 </itemremove>
  
 <killreward>
-    <item amount="1">golden apple</item>
+    <item>golden apple</item>
 </killreward>
  
 <gamerules>
