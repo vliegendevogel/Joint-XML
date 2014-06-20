@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>DK Crossovers DTE</name>
+<version>1.0.0</version>
+<objective>
+    Destroy 75% of the enemy's side!
+</objective>
+<authors>
+    <author>DoomRobotBoy</author>
+</authors>
+<contributors>
+    <contributor contribution="XML">orky48</contributor>
+</contributors>
+<teams>
+    <team color="blue" max="30">Blue Team</team>
+    <team color="green" max="30">Green Team</team>
+</teams>
+<kits>
+    <kit name="spawn">
+        <item slot="0">iron sword</item>
+        <item slot="1" enchantment="arrow damage:1">bow</item>
+        <item slot="28" amount="64">arrow</item>
+        <item slot="19" amount="64">arrow</item>
+        <item slot="2" enchantment="dig speed:2">iron pickaxe</item>
+        <item slot="3" amount="64">golden carrot</item>
+        <item slot="4" amount="64">TNT</item>
+        <item slot="31" amount="64">TNT</item>
+        <item slot="22" amount="64">TNT</item>
+        <item slot="5" amount="64">redstone torch on</item>
+        <item slot="32" amount="64">redstone wire</item>
+        <item slot="23" amount="64">redstone wire</item>
+        <item slot="7" amount="32">diode</item>
+        <item slot="34" amount="64">stone button</item>
+        <item slot="25" amount="64">wood plate</item>
+        <item slot="8">water bucket</item>
+        <item slot="35">water bucket</item>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <item slot="6" amount="64" damage="11">stained clay</item>
+        <item slot="33" amount="64" damage="11">stained clay</item>
+        <helmet color="334CB2">leather helmet</helmet>
+        <chestplate enchantment="protection explosions:3">chainmail chestplate</chestplate>
+        <leggings>iron leggings</leggings>
+        <boots color="334CB2" enchantment="protection fall:1">leather boots</boots>
+    </kit>
+    <kit name="green" parents="spawn">
+        <item slot="6" amount="64" damage="5">stained clay</item>
+        <item slot="33" amount="64" damage="5">stained clay</item>
+        <helmet color="667F33">leather helmet</helmet>
+        <chestplate enchantment="protection explosions:3">chainmail chestplate</chestplate>
+        <leggings>iron leggings</leggings>
+        <boots color="667F33" enchantment="protection fall:1">leather boots</boots>
+    </kit>
+    <kit name="health">
+        <potion duration="8" amplifier="1">heal</potion>
+    </kit>
+</kits>
+<spawns>
+    <spawn team="blue" yaw="0" kit="blue">
+        <cuboid min="989,114,444" max="998,114,446"/>
+    </spawn>
+    <spawn team="green" yaw="0" kit="green">
+        <cuboid min="943,114,444" max="952,114,446"/>
+    </spawn>
+    <default yaw="0">
+        <cuboid min="969,117,441" max="972,117,444"/>
+    </default>
+</spawns>
+<filters>
+    <filter name="deny-glass">
+        <not>
+            <block>glass</block>
+        </not>
+    </filter>
+</filters>
+<regions>
+    <apply block="deny-glass" message="You may not break the glass!">
+        <rectangle min="-oo,-oo" max="oo,oo"/>
+    </apply>
+    <apply block="deny-all" message="You may not edit outside the map!">
+        <negative>
+            <cuboid min="934,0,359" max="1007,199,439"/>
+        </negative>
+    </apply>
+    <apply kit="health">
+        <cuboid min="996,113,453" max="992,177,449"/>
+        <cuboid min="948,113,453" max="946,177,449"/>
+    </apply>
+</regions>
+<destroyables>
+    <destroyable name="Blue Side" owner="blue" completion="75" show-progress="true" materials="stained clay:1;stained clay:3;stained clay:7;stained clay:8;stained clay:11;stained clay:12;stained clay:14;gold block;lapis block;redstone block;plank,plank:3;stained glass:4;wool;wool:7;wool:8;wool:14">
+        <cuboid min="999,0,359" max="942,117,440"/>
+    </destroyable>
+    <destroyable name="Green Side" owner="green" completion="75" show-progress="true" materials="stained clay:1;stained clay:3;stained clay:5;stained clay:7;stained clay:8;stained clay:12;stained clay:14;gold block;lapis block;redstone block;plank,plank:3;stained glass:4;wool;wool:7;wool:8;wool:14">
+        <cuboid min="934,0,358" max="942,117,439"/>
+    </destroyable>
+    <destroyable name="wall" materials="glass" owner="green" completion="0" show="false" mode-changes="true">
+        <cuboid min="969,0,361" max="972,119,437"/>
+    </destroyable>
+</destroyables>
+<portals>
+    <!-- Blue's portals -->
+    <portal x="@1006" y="@81" z="@383" yaw="90">
+        <cuboid min="989,92,442" max="990,94,443"/>
+    </portal>
+    <portal x="@1006" y="@54" z="@383" yaw="90">
+        <cuboid min="993,92,442" max="994,94,443"/>
+    </portal>
+    <portal x="@1006" y="@32" z="@383" yaw="90">
+        <cuboid min="997,92,442" max="998,94,443"/>
+    </portal>
+    <!--Green's portals -->
+    <portal x="@935" y="@81" z="@415" yaw="-90">
+        <cuboid min="943,92,442" max="944,94,443"/>
+    </portal>
+    <portal x="@935" y="@54" z="@415" yaw="-90">
+        <cuboid min="947,92,442" max="948,94,443"/>
+    </portal>
+    <portal x="@935" y="@32" z="@415" yaw="-90">
+        <cuboid min="951,92,442" max="952,94,443"/>
+    </portal>
+</portals>
+</map>
