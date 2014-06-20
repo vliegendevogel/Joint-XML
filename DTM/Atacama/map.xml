@@ -60,6 +60,20 @@
     </kit>
 </kits>
 
+<filters>
+ <filter name="only-red">
+  <team>red</team>
+ </filter>
+</filters>
+
+<regions>
+ <rectangle name="spawn-protection-red" min="-740,-618" max="-750,-628"/>
+ 
+ <apply block="deny-all" enter="only-red">
+  <region name="spawn-protection-red"/>
+ </apply>
+</regions>
+
 <destroyables>
  <destroyables name="Monument A" completion="100%" materials="obsidian">
      <destroyable owner="blue">
