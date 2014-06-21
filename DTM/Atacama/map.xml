@@ -21,11 +21,11 @@
 </teams>
  
 <spawns>
-    <spawn team="red" kit="red" safe="true">
-            <cuboid min="-746,25,-626" max="-743,25,-621"/>
+    <spawn team="red" kit="red" safe="true" yaw="0">
+            <cuboid min="-744,25,-626" max="-746,25,-625"/>
     </spawn>
-    <spawn team="blue" kit="blue" safe="true">
-            <cuboid min="-744,25,-499" max="-747,25,-504"/>
+    <spawn team="blue" kit="blue" safe="true" yaw="-180">
+            <cuboid min="-748,25,-499" max="-744,25,-500"/>
     </spawn>
     <default yaw="-90">
        <cylinder base="-799, 46,-563" radius="4" height="0"/>
@@ -83,7 +83,9 @@
  </apply>
  
  <apply block="deny-all" message="you may not edit blocks out side of the map!">
-  <region name="main-area"/>
+  <negative>
+     <region name="main-area"/>
+  </negative>
  </apply>
 </regions>
 
