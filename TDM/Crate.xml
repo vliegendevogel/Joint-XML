@@ -16,14 +16,33 @@
     <team color="blue" max="16">Blue Team</team>
     <team color="dark red" max="16">Red Team</team>
 </teams>
-    <spawns>
-        <spawn team="blue" yaw="-90">
-            <cuboid min="-20,9,-1" max="-23,9,2"/>
-        </spawn>
-        <spawn team="red" yaw="0">
-            <cuboid min="21,9,2" max="24,9,-1"/>
-        </spawn>
-    </spawns>
+<kits>
+    <kit name="spawn">
+        <item slot="0" damage="-3000">stone sword</item>
+        <item slot="1" damage="-3000">bow</item>
+        <item slot="28" amount="16">arrow</item>
+        <item slot="2" amount="16">golden carrot</item>
+        <chestplate damage="-3000">chainmail chestplate</chestplate>
+        <potion duration="5" amplifier="1">heal</potion>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <helmet color="334CB2">leather helmet</helmet>
+        <leggings color="334CB2">leather leggings</leggings>
+        <boots color="334CB2">leather boots</boots>
+    </kit>
+    <kit name="red" parents="spawn">
+        <helmet color="993333">leather helmet</helmet>
+        <leggings color="993333">leather leggings</leggings>
+        <boots color="993333">leather boots</boots>
+    </kit>
+</kits>
+<spawns>
+    <spawn team="blue" kit="blue" yaw="-90">
+        <cuboid min="-20,9,-1" max="-23,9,2"/>
+    </spawn>
+    <spawn team="red" kit="red" yaw="0">
+        <cuboid min="21,9,2" max="24,9,-1"/>
+    </spawn>
     <default>
         <point yaw="145">0.5,36,0.5</point>
     </default>
@@ -31,4 +50,17 @@
 <score>
     <time>5m</time>
 </score>
+<itemremove>
+    <item>stone sword</item>
+    <item>bow</item>
+    <item>leather helmet</item>
+    <item>chainmail chestplate</item>
+    <item>leather leggings</item>
+    <item>leather boots</item>
+    <item>golden carrot</item>
+</itemremove>
+<killreward>
+    <!-- Instant health 1 -->
+    <item damage="8197">potion</item>
+</killreward>
 </map>
