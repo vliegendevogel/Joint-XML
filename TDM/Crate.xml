@@ -28,4 +28,7 @@
         <point yaw="145">0.5,36,0.5</point>
     </default>
 </spawns>
+<score>
+    <time>5m</time>
+</score>
 </map>
