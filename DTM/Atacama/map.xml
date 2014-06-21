@@ -93,6 +93,14 @@
 			<block>stationary water</block>
         </all>
     </filter>
+	<filter name="no-ice">
+		<not>
+			<all>
+				<filter name="allow-world"/>
+				<block>ice</block>
+			</all>
+		</not>
+	</filter>
 	</filters>
 	<regions>
 		<rectangle name="main-area" min="45,-106" max="-36,118"/>
@@ -115,5 +123,33 @@
 				<region name="main-area"/>
 			</negative>
 		</apply>
+		<apply block="no-ice">
+			<region name="main-area"/>
+		</apply>
 	</regions>
+	<killreward>
+		<item amount="4">redstone</item>
+	</killreward>
+	<itemremove>
+		<item>leather helmet</item>
+		<item>leather chestplate</item>
+		<item>chainmail leggings</item>
+		<item>leather boots</item>
+		<item>redstone</item>
+		<item>cooked fish:1</item>
+		<item>log 2</item>
+		<item>log:2</item>
+		<item>gravel</item>
+		<item>quartz block</item>
+		<item>quartz stairs</item>
+		<item>step:7</item>
+		<item>stained clay</item>
+	</itemremove>
+	<toolrepair>
+		<tool>iron sword</tool>
+		<tool>bow</tool>
+		<tool>diamond pickaxe</tool>
+		<tool>stone axe</tool>
+		<tool>arrow</tool>
+	</toolrepair>
 </map>
