@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>Crate TDM</name>
+<version>1.0.0</version>
+<authors>
+    <author>matic0basle</author>
+</authors>
+<objective>Be the team with the lease amount of deaths after 5 minutes</objective>
+<regions>
+    <rectangle name="main-area" min="-oo,-oo" max="oo,oo"/>
+    <apply block="deny-all">
+        <rectangle min="-oo,-oo" max="oo,oo"/>
+    </apply>
+</regions>
+<teams>
+    <team color="blue" max="16">Blue Team</team>
+    <team color="dark red" max="16">Red Team</team>
+</teams>
+    <spawns>
+        <spawn team="blue" yaw="-90">
+            <cuboid min="-20,9,-1" max="-23,9,2"/>
+        </spawn>
+        <spawn team="red" yaw="0">
+            <cuboid min="21,9,2" max="24,9,-1"/>
+        </spawn>
+    </spawns>
+    <default>
+        <point yaw="145">0.5,36,0.5</point>
+    </default>
+</spawns>
+</map>
