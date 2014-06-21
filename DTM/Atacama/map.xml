@@ -1,143 +1,143 @@
 <?xml version="1.0"?>
 <map proto="1.3.3">
-	<name>Atacama</name>
-	<version>1.0.0</version>
-	<objective>Destroy the other team's 2 monuments to win the game!</objective>
+<name>Atacama</name>
+<version>1.0.0</version>
+<objective>Destroy the other team's 2 monuments to win the game!</objective>
 
-	<authors>
-		<author>zeldcat</author>
-	</authors>
+<authors>
+<author>zeldcat</author>
+</authors>
 
-	<contributors>
-		<contributor contribution="Feedback and help with ideas">thsjig</contributor>
-		<contributor contribution="Detailing + aesthetics">Graywolf6533</contributor>
-	</contributors>
+<contributors>
+<contributor contribution="Feedback and help with ideas">thsjig</contributor>
+<contributor contribution="Detailing + aesthetics">Graywolf6533</contributor>
+</contributors>
 
-	<include src="tutorial.xml"/>
+<include src="tutorial.xml"/>
 
-	<teams>
-		<team color="dark red" max="16">Red Team</team>
-		<team color="blue" max="16">Blue Team</team>
-	</teams>
+<teams>
+<team color="dark red" max="16">Red Team</team>
+<team color="blue" max="16">Blue Team</team>
+</teams>
 
-	<spawns>
-		<spawn team="red" kit="red" safe="true" yaw="0">
-			<cuboid min="-744,25,-626" max="-746,25,-625"/>
-		</spawn>
-		<spawn team="blue" kit="blue" safe="true" yaw="-180">
-			<cuboid min="-748,25,-499" max="-744,25,-500"/>
-		</spawn>
-		<default yaw="-90">
-			<cylinder base="-799, 46,-563" radius="4" height="0"/>
-		<default>
-	</spawns>
+<spawns>
+<spawn team="red" kit="red" safe="true" yaw="0">
+<cuboid min="-744,25,-626" max="-746,25,-625"/>
+</spawn>
+<spawn team="blue" kit="blue" safe="true" yaw="-180">
+<cuboid min="-748,25,-499" max="-744,25,-500"/>
+</spawn>
+<default yaw="-90">
+<cylinder base="-799, 46,-563" radius="4" height="0"/>
+<default>
+</spawns>
 
-	<kits>
-		<kit name="spawn" force="true">
-			<item slot="0">stone sword</item>
-			<item slot="1" enchantment="arrow infinite:1">bow</item>
-			<item slot="28" amount="1">arrow</item>
-			<item slot="3" enchantment="durability:3">stone axe</item>
-			<item slot="2" enchantment="durability:3">diamond pickaxe</item>
-			<item slot="4" enchantment="durability:3">wooden shovel</item>
-			<item slot="6" amount="64">oak planks</item>
-			<item slot="7" amount="1">golden apple</item>
-			<item slot="8" amount="64">bread</item>
-		</kit>
-		<kit name="red" parents="spawn">
-			<helmet color="cd0000" damage="-3000">leather helmet</helmet>
-			<chestplate color="cd0000" damage="-3000">leather chestplate</chestplate>
-			<leggings color="cd0000" damage="-3000">leather leggings</leggings>
-			<boots color="cd0000" damage="-3000">leather boots</boots>
-			<item slot="5" amount="64">red stained clay</item>
-		</kit>
-		<kit name="blue" parents="spawn">
-			<helmet color="0066cc" damage="-3000">leather helmet</helmet>
-			<chestplate color="0066cc" damage="-3000">leather chestplate</chestplate>
-			<leggings color="0066cc" damage="-3000">leather leggings</leggings>
-			<boots color="0066cc" damage="-3000">leather boots</boots>
-			<item slot="5" amount="64">blue stained clay</item>
-		</kit>
-	</kits>
+<kits>
+<kit name="spawn" force="true">
+<item slot="0">stone sword</item>
+<item slot="1" enchantment="arrow infinite:1">bow</item>
+<item slot="28" amount="1">arrow</item>
+<item slot="3" enchantment="durability:3">stone axe</item>
+<item slot="2" enchantment="durability:3">diamond pickaxe</item>
+<item slot="4" enchantment="durability:3">wooden shovel</item>
+<item slot="6" amount="64">oak planks</item>
+<item slot="7" amount="1">golden apple</item>
+<item slot="8" amount="64">bread</item>
+</kit>
+<kit name="red" parents="spawn">
+<helmet color="cd0000" damage="-3000">leather helmet</helmet>
+<chestplate color="cd0000" damage="-3000">leather chestplate</chestplate>
+<leggings color="cd0000" damage="-3000">leather leggings</leggings>
+<boots color="cd0000" damage="-3000">leather boots</boots>
+<item slot="5" amount="64">red stained clay</item>
+</kit>
+<kit name="blue" parents="spawn">
+<helmet color="0066cc" damage="-3000">leather helmet</helmet>
+<chestplate color="0066cc" damage="-3000">leather chestplate</chestplate>
+<leggings color="0066cc" damage="-3000">leather leggings</leggings>
+<boots color="0066cc" damage="-3000">leather boots</boots>
+<item slot="5" amount="64">blue stained clay</item>
+</kit>
+</kits>
 
-	<filters>
-		<filter name="only-red">
-			<team>red</team>
-		</filter>
-		<filter name="only-blue">
-			<team>blue</team>
-		</filter>
-	</filters>
+<filters>
+<filter name="only-red">
+<team>red</team>
+</filter>
+<filter name="only-blue">
+<team>blue</team>
+</filter>
+</filters>
 
-	<regions>
-		<rectangle name="spawn-protection-red" min="-740,-618" max="-750,-628"/>
-		<rectangle name="spawn-protection-blue" min="-750,-507" max="-740,-497"/>
-		<rectangle name="main-area" min="-710,-482" max="-780,-646"/>
+<regions>
+<rectangle name="spawn-protection-red" min="-740,-618" max="-750,-628"/>
+<rectangle name="spawn-protection-blue" min="-750,-507" max="-740,-497"/>
+<rectangle name="main-area" min="-710,-482" max="-780,-646"/>
 
-		<apply block="deny-all" enter="only-red">
-			<region name="spawn-protection-red"/>
-		</apply>
+<apply block="deny-all" enter="only-red">
+<region name="spawn-protection-red"/>
+</apply>
 
-		<apply block="deny-all" enter="only-blue">
-			<region name="spawn-protection-blue"/>
-		</apply>
+<apply block="deny-all" enter="only-blue">
+<region name="spawn-protection-blue"/>
+</apply>
 
-		<apply block="deny-all" message="you may not edit blocks out side of the map!">
-			<negative>
-				<region name="main-area"/>
-			</negative>
-		</apply>
-	</regions>
+<apply block="deny-all" message="you may not edit blocks out side of the map!">
+<negative>
+	<region name="main-area"/>
+</negative>
+</apply>
+</regions>
 
-	<destroyables>
-		<destroyables name="Monument A" completion="100%" materials="obsidian">
-			<destroyable owner="blue">
-				<cuboid min="-723,8,-485" max="-722,9,-484"/>
-			</destroyable>
-			<destroyable owner="red">
-				<cuboid min="-768,8,-641" max="-767,9,-640"/>
-			</destroyable>
-		</destroyables>
+<destroyables>
+<destroyables name="Monument A" completion="100%" materials="obsidian">
+<destroyable owner="blue">
+	<cuboid min="-723,8,-485" max="-722,9,-484"/>
+</destroyable>
+<destroyable owner="red">
+	<cuboid min="-768,8,-641" max="-767,9,-640"/>
+</destroyable>
+</destroyables>
 
-		<destroyables name="Monument B" completion="100%" materials="obsidian">
-			<destroyable owner="blue">
-				<cuboid min="-767,8,-485" max="-768,9,-484"/>
-			</destroyable>
-			<destroyable owner="red">
-				<cuboid min="-723,8,-641" max="-722,9,-640"/>
-			</destroyable>
-		</destroyables>
-	</destroyables>
+<destroyables name="Monument B" completion="100%" materials="obsidian">
+<destroyable owner="blue">
+	<cuboid min="-767,8,-485" max="-768,9,-484"/>
+</destroyable>
+<destroyable owner="red">
+	<cuboid min="-723,8,-641" max="-722,9,-640"/>
+</destroyable>
+</destroyables>
+</destroyables>
 
-	<toolrepair>
-		<tool>stone sword</tool>
-		<tool>diamond pickaxe</tool>
-		<tool>stone axe</tool>
-		<tool>bow</tool>
-		<tool>wood spade</tool>
-		<tool>arrow</tool>
-	</toolrepair>
+<toolrepair>
+<tool>stone sword</tool>
+<tool>diamond pickaxe</tool>
+<tool>stone axe</tool>
+<tool>bow</tool>
+<tool>wood spade</tool>
+<tool>arrow</tool>
+</toolrepair>
 
-	<itemremove>
-		<item>leather helmet</item>
-		<item>leather chestplate</item>
-		<item>leather leggings</item>
-		<item>leather boots</item>
-		<item>wood</item>
-		<item>stained clay:11</item>
-		<item>stained clay:14</item>
-		<item>obsidian</item>
-		<item>bread</item>
-	</itemremove>
+<itemremove>
+<item>leather helmet</item>
+<item>leather chestplate</item>
+<item>leather leggings</item>
+<item>leather boots</item>
+<item>wood</item>
+<item>stained clay:11</item>
+<item>stained clay:14</item>
+<item>obsidian</item>
+<item>bread</item>
+</itemremove>
 
-	<killreward>
-		<item>golden apple</item>
-	</killreward>
+<killreward>
+<item>golden apple</item>
+</killreward>
 
-	<gamerules>
-		<doDylightCycle>false</doDaylightCycle>
-	</gamerules>
+<gamerules>
+<doDylightCycle>false</doDaylightCycle>
+</gamerules>
 
-	<maxbuildheight>17</maxbuildheight>
+<maxbuildheight>17</maxbuildheight>
 
 </map>
