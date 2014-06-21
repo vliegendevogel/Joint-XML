@@ -1,98 +1,98 @@
 <?xml version="1.0"?>
 <map proto="1.3.3">
-	<name>Cuboid Fairway</name>
-	<version>1.1.0</version>
-	<objective>Break the two endstone monuments and leak the core to win!</objective>
-	<authors>
-		<authors>scorch1183</authors>
-	</authors>
-	<contributors>
-		<contributor contributation="Gameplay ideas">chickolympics</contributor>
-		<contributor contributation="Initial map help">k3wldud3</contributor>
-		<contributor contributation="XML">Captain_Elliott</contributor>
-	</contributors>
-	<teams>
-		<team color="gold" max="" max-overfill="">Yellow Team</team>
-		<team color="red" max="" max-overfill="">Red Team</team>
-	</teams>
-	<kits>
-		<kit name="spawn" force="true">
-			<item slot="0">iron sword</item>
-			<item slot="1" enchantment="arrow infinite:1">bow</item>
-			<item slot="2">diamond pickaxe</item>
-			<item slot="3">stone axe</item>
-			<item slot="5" amount="8">redstone</item>
-			<item slot="6" amount="32">cooked fish:1</item><!--Salmon-->
-			<item slot="28">arrow</item>
-			<leggings enchantment="protection projectile:1">chainmail leggings</leggings>
-		</kit>
+<name>Cuboid Fairway</name>
+<version>1.1.0</version>
+<objective>Break the two endstone monuments and leak the core to win!</objective>
+<authors>
+	<authors>scorch1183</authors>
+</authors>
+<contributors>
+	<contributor contributation="Gameplay ideas">chickolympics</contributor>
+	<contributor contributation="Initial map help">k3wldud3</contributor>
+	<contributor contributation="XML">Captain_Elliott</contributor>
+</contributors>
+<teams>
+	<team color="gold" max="" max-overfill="">Yellow Team</team>
+	<team color="red" max="" max-overfill="">Red Team</team>
+</teams>
+<kits>
+	<kit name="spawn" force="true">
+		<item slot="0">iron sword</item>
+		<item slot="1" enchantment="arrow infinite:1">bow</item>
+		<item slot="2">diamond pickaxe</item>
+		<item slot="3">stone axe</item>
+		<item slot="5" amount="8">redstone</item>
+		<item slot="6" amount="32">cooked fish:1</item><!--Salmon-->
+		<item slot="28">arrow</item>
+		<leggings enchantment="protection projectile:1">chainmail leggings</leggings>
+	</kit>
 		<kit name="red" parents="spawn">
-			<item slot="4" amount="32">log 2</item>
-			<helmet color="993333" damage="-3000">leather helmet</helmet>
-			<chestplate color="993333" damge="-3000">leather chestplate</chestplate>
-			<boots color="993333" damage="-300">leather boots</boots>
-		</kit>
+		<item slot="4" amount="32">log 2</item>
+		<helmet color="993333" damage="-3000">leather helmet</helmet>
+		<chestplate color="993333" damge="-3000">leather chestplate</chestplate>
+		<boots color="993333" damage="-300">leather boots</boots>
+	</kit>
 		<kit name="gold" parents="spawn">
-			<item slot="4" amount="32">log:2</item>
-			<helmet color="E5E533" damage="-3000">leather helmet</helmet>
-			<chestplate color="E5E533" damge="-3000">leather chestplate</chestplate>
-			<boots color="E5E533" damage="-300">leather boots</boots>
-		</kit>
-	</kits>
-	<spawns>
-		<spawn team="gold" kit="gold" safe="true">
-			<cuboid min="7,2,80" max="2,2,75"/>
-		</spawn>
-		<spawn team="red" kit="red" safe="true">
-			<cuboid min="2,2,-69" max="7,2,-64"/>
-		</spawn>
-		<default yaw="90">
-			<cuboid min="54,28,7" max="57,28,4"/>
-		</default>
-	</spawns>
-	<destroyables name="Monument" materials="endstone" completion="100%" mode-changes="false" show=progress="true" repairable="false">
-		<destroyable owner="red" name="Left Monument">
-		   <cuboid min="-18,13,-44" max="-21,16,-47"/>
-		</destroyable>
-		<destroyable owner="red" name="Right Monument">
-		   <cuboid min="37,13,-47" max="30,16,-44"/>
-		</destroyable>
-		<destroyable owner="gold" name="Left Monument">
-		   <cuboid min="27,13,55" max="30,16,58"/>
-		</destroyable>
-		<destroyable owner="gold" name="Right Monument">
-		   <cuboid min="-21,13,58" max="-18,16,55"/>
-		</destroyable>
-	</destroyables>
-	<cores material="obsidian" leak="3" mode-changes="true">
-		<core team="gold">
-			<cuboid min="2,13,43" max="7,18,38"/>
-		</core>
-		<core team="red">
-			<cuboid min="7,13,-32" max="2,18,-27"/>
-		</core>
-	</cores>
-	<modes>
-		<mode after="15" material="gold block" name="`6Gold Core mode!"/>
-		<mode after="30" material="glass" name="`7Glass Core mode!"/>
-	</modes>
-	<filters>
-		<filter name="only-gold">
-			<team>gold</team>
-		</filter>
-		<filter name="only-red">
-			<team>red</team>
-		</filter>
-		 <filter name="only-water">
-        <all>
-            <any>
-                <filter name="deny-world"/>
-                <filter name="deny-all"/>
-            </any>
-            <block>water</block>
+		<item slot="4" amount="32">log:2</item>
+		<helmet color="E5E533" damage="-3000">leather helmet</helmet>
+		<chestplate color="E5E533" damge="-3000">leather chestplate</chestplate>
+		<boots color="E5E533" damage="-300">leather boots</boots>
+	</kit>
+</kits>
+<spawns>
+	<spawn team="gold" kit="gold" safe="true">
+		<cuboid min="7,2,80" max="2,2,75"/>
+	</spawn>
+	<spawn team="red" kit="red" safe="true">
+		<cuboid min="2,2,-69" max="7,2,-64"/>
+	</spawn>
+	<default yaw="90">
+		<cuboid min="54,28,7" max="57,28,4"/>
+	</default>
+</spawns>
+<destroyables name="Monument" materials="endstone" completion="100%" mode-changes="false" show=progress="true" repairable="false">
+	<destroyable owner="red" name="Left Monument">
+		<cuboid min="-18,13,-44" max="-21,16,-47"/>
+	</destroyable>
+	<destroyable owner="red" name="Right Monument">
+		<cuboid min="37,13,-47" max="30,16,-44"/>
+	</destroyable>
+	<destroyable owner="gold" name="Left Monument">
+		<cuboid min="27,13,55" max="30,16,58"/>
+	</destroyable>
+	<destroyable owner="gold" name="Right Monument">
+		<cuboid min="-21,13,58" max="-18,16,55"/>
+	</destroyable>
+</destroyables>
+<cores material="obsidian" leak="3" mode-changes="true">
+	<core team="gold">
+		<cuboid min="2,13,43" max="7,18,38"/>
+	</core>
+	<core team="red">
+		<cuboid min="7,13,-32" max="2,18,-27"/>
+	</core>
+</cores>
+<modes>
+	<mode after="15" material="gold block" name="`6Gold Core mode!"/>
+	<mode after="30" material="glass" name="`7Glass Core mode!"/>
+</modes>
+<filters>
+	<filter name="only-gold">
+		<team>gold</team>
+	</filter>
+	<filter name="only-red">
+		<team>red</team>
+	</filter>
+	<filter name="only-water">
+		<all>
+			<any>
+				<filter name="deny-world"/>
+				<filter name="deny-all"/>
+			</any>
+			<block>water</block>
 			<block>stationary water</block>
-        </all>
-    </filter>
+		</all>
+	</filter>
 	<filter name="no-ice">
 		<not>
 			<all>
@@ -101,56 +101,54 @@
 			</all>
 		</not>
 	</filter>
-	</filters>
-	<regions>
-		<rectangle name="main-area" min="45,-106" max="-36,118"/>
-		<cuboid name="gold-spawn" min="12,0,86" max="-4,oo,69"/>
-		<cuboid name="red-spawn" min="3,0,-75" max="13,oo,-58"/>
-		<apply block="only-water" message="you may not break blocks in spawn!">
-			<region name="gold-spawn"/>
-		</apply>
-		<apply enter="only-gold" message="you may not enter the enemy teams base!">
-			<region name="gold-spawn"/>
-		</apply>
-		<apply block="only-water" message="you may not break blocks in spawn!">
-			<region name="red-spawn"/>
-		</apply>
-		<apply enter="only-red" message="you may not enter the enemy teams base!">
-			<region name="gold-red"/>
-		</apply>
-		<apply block="deny-blocks" message="you may not leave the playing field">
-			<negative>
-				<region name="main-area"/>
-			</negative>
-		</apply>
-		<apply block="no-ice">
+</filters>
+<regions>
+	<rectangle name="main-area" min="45,-106" max="-36,118"/>
+	<cuboid name="gold-spawn" min="12,0,86" max="-4,oo,69"/>
+	<cuboid name="red-spawn" min="3,0,-75" max="13,oo,-58"/>
+	<apply block="only-water" message="you may not break blocks in spawn!">
+		<region name="gold-spawn"/>
+	</apply>
+	<apply enter="only-gold" message="you may not enter the enemy teams base!">
+		<region name="gold-spawn"/>
+	</apply>
+	<apply block="only-water" message="you may not break blocks in spawn!">
+		<region name="red-spawn"/>
+	</apply>
+	<apply enter="only-red" message="you may not enter the enemy teams base!">
+		<region name="gold-red"/>
+	</apply>
+	<apply block="deny-blocks" message="you may not leave the playing field">
+		<negative>
 			<region name="main-area"/>
-		</apply>
-	</regions>
-	<killreward>
-		<item amount="4">redstone</item>
-	</killreward>
-	<itemremove>
-		<item>leather helmet</item>
-		<item>leather chestplate</item>
-		<item>chainmail leggings</item>
-		<item>leather boots</item>
-		<item>redstone</item>
-		<item>cooked fish:1</item>
-		<item>log 2</item>
-		<item>log:2</item>
-		<item>gravel</item>
-		<item>quartz block</item>
-		<item>quartz stairs</item>
-		<item>step:7</item>
-		<item>stained clay</item>
-	</itemremove>
-	<toolrepair>
-		<tool>iron sword</tool>
-		<tool>bow</tool>
-		<tool>diamond pickaxe</tool>
-		<tool>stone axe</tool>
-		<tool>arrow</tool>
-	</toolrepair>
-	<maxbuildheight>30</maxbuildheight><!--need This! set it at 30 for now-->
+		</negative>
+	</apply>
+	<apply block="no-ice">
+		<region name="main-area"/>
+	</apply>
+</regions>
+<killreward>
+	<item amount="4">redstone</item>
+</killreward>
+<itemremove>
+	<item>leather helmet</item>
+	<item>leather chestplate</item>
+	<item>chainmail leggings</item>
+	<item>leather boots</item>
+	<item>redstone</item>
+	<item>cooked fish:1</item>
+	<item>gravel</item>
+	<item>quartz block</item>
+	<item>quartz stairs</item>
+	<item>step:7</item>
+	<item>stained clay</item>
+</itemremove>
+<toolrepair>
+	<tool>iron sword</tool>
+	<tool>bow</tool>
+	<tool>diamond pickaxe</tool>
+	<tool>stone axe</tool>
+	<tool>arrow</tool>
+</toolrepair>
+<maxbuildheight>30</maxbuildheight><!--need This! set it at 30 for now-->
 </map>
