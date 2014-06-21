@@ -152,4 +152,5 @@
 		<tool>stone axe</tool>
 		<tool>arrow</tool>
 	</toolrepair>
+	<maxbuildheight>30</maxbuildheight><!--need This! set it at 30 for now-->
 </map>
