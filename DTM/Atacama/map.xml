@@ -64,13 +64,26 @@
  <filter name="only-red">
   <team>red</team>
  </filter>
+ <filter name="only-blue">
+  <team>blue</team>
+ </filter>
 </filters>
 
 <regions>
  <rectangle name="spawn-protection-red" min="-740,-618" max="-750,-628"/>
+ <rectangle name="spawn-protection-blue" min="-750,-507" max="-740,-497"/>
+ <rectangle name="main-area" min="-710,-482" max="-780,-646"/>
  
  <apply block="deny-all" enter="only-red">
   <region name="spawn-protection-red"/>
+ </apply>
+ 
+ <apply block="deny-all" enter="only-blue">
+  <region name="spawn-protection-blue"/>
+ </apply>
+ 
+ <apply block="deny-all" message="you may not edit blocks out side of the map!">
+  <region name="main-area"/>
  </apply>
 </regions>
 
