@@ -30,13 +30,13 @@
 		<item slot="4" amount="32">log 2</item>
 		<helmet color="993333" damage="-3000">leather helmet</helmet>
 		<chestplate color="993333" damge="-3000">leather chestplate</chestplate>
-		<boots color="993333" damage="-300">leather boots</boots>
+		<boots color="993333" damage="-3000">leather boots</boots>
 	</kit>
 		<kit name="yellow" parents="spawn">
 		<item slot="4" amount="32">log:2</item>
 		<helmet color="E5E533" damage="-3000">leather helmet</helmet>
 		<chestplate color="E5E533" damge="-3000">leather chestplate</chestplate>
-		<boots color="E5E533" damage="-300">leather boots</boots>
+		<boots color="E5E533" damage="-3000">leather boots</boots>
 	</kit>
 </kits>
 <spawns>
