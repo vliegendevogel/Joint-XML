@@ -12,8 +12,8 @@
 	<contributor contributation="XML">Captain_Elliott</contributor>
 </contributors>
 <teams>
-	<team color="gold" max="" max-overfill="">Yellow Team</team>
-	<team color="red" max="" max-overfill="">Red Team</team>
+	<team color="gold" max="24" max-overfill="28">Yellow Team</team>
+	<team color="red" max="24" max-overfill="28">Red Team</team>
 </teams>
 <kits>
 	<kit name="spawn" force="true">
@@ -150,5 +150,5 @@
 	<tool>stone axe</tool>
 	<tool>arrow</tool>
 </toolrepair>
-<maxbuildheight>30</maxbuildheight><!--need This! set it at 30 for now-->
+<maxbuildheight>25</maxbuildheight>
 </map>
