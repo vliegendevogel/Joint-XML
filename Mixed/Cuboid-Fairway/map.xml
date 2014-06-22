@@ -22,7 +22,7 @@
 		<item slot="2">diamond pickaxe</item>
 		<item slot="3">stone axe</item>
 		<item slot="5" amount="8">redstone</item>
-		<item slot="6" amount="32">cooked fish:1</item><!--Salmon-->
+		<item slot="6" amount="32" damage="1">cooked fish</item><!--Salmon-->
 		<item slot="28">arrow</item>
 		<leggings enchantment="protection projectile:1">chainmail leggings</leggings>
 	</kit>
