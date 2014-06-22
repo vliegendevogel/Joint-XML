@@ -12,7 +12,7 @@
 	<contributor contributation="XML">Captain_Elliott</contributor>
 </contributors>
 <teams>
-	<team color="gold" max="24" max-overfill="28">Yellow Team</team>
+	<team color="yellow" max="24" max-overfill="28">Yellow Team</team>
 	<team color="red" max="24" max-overfill="28">Red Team</team>
 </teams>
 <kits>
@@ -32,7 +32,7 @@
 		<chestplate color="993333" damge="-3000">leather chestplate</chestplate>
 		<boots color="993333" damage="-300">leather boots</boots>
 	</kit>
-		<kit name="gold" parents="spawn">
+		<kit name="yellow" parents="spawn">
 		<item slot="4" amount="32">log:2</item>
 		<helmet color="E5E533" damage="-3000">leather helmet</helmet>
 		<chestplate color="E5E533" damge="-3000">leather chestplate</chestplate>
@@ -40,7 +40,7 @@
 	</kit>
 </kits>
 <spawns>
-	<spawn team="gold" kit="gold" safe="true">
+	<spawn team="yellow" kit="gold" safe="true">
 		<cuboid min="7,2,80" max="2,2,75"/>
 	</spawn>
 	<spawn team="red" kit="red" safe="true">
@@ -57,15 +57,15 @@
 	<destroyable owner="red" name="Right Monument">
 		<cuboid min="37,13,-47" max="30,16,-44"/>
 	</destroyable>
-	<destroyable owner="gold" name="Left Monument">
+	<destroyable owner="yellow" name="Left Monument">
 		<cuboid min="27,13,55" max="30,16,58"/>
 	</destroyable>
-	<destroyable owner="gold" name="Right Monument">
+	<destroyable owner="yellow" name="Right Monument">
 		<cuboid min="-21,13,58" max="-18,16,55"/>
 	</destroyable>
 </destroyables>
 <cores material="obsidian" leak="3" mode-changes="true">
-	<core team="gold">
+	<core team="yellow">
 		<cuboid min="2,13,43" max="7,18,38"/>
 	</core>
 	<core team="red">
@@ -77,8 +77,8 @@
 	<mode after="30" material="glass" name="`7Glass Core mode!"/>
 </modes>
 <filters>
-	<filter name="only-gold">
-		<team>gold</team>
+	<filter name="only-yellow">
+		<team>yellow</team>
 	</filter>
 	<filter name="only-red">
 		<team>red</team>
@@ -104,13 +104,13 @@
 </filters>
 <regions>
 	<rectangle name="main-area" min="45,-106" max="-36,118"/>
-	<cuboid name="gold-spawn" min="12,0,86" max="-4,oo,69"/>
+	<cuboid name="yellow-spawn" min="12,0,86" max="-4,oo,69"/>
 	<cuboid name="red-spawn" min="3,0,-75" max="13,oo,-58"/>
 	<apply block="only-water" message="you may not break blocks in spawn!">
-		<region name="gold-spawn"/>
+		<region name="yellow-spawn"/>
 	</apply>
-	<apply enter="only-gold" message="you may not enter the enemy teams base!">
-		<region name="gold-spawn"/>
+	<apply enter="only-yellow" message="you may not enter the enemy teams base!">
+		<region name="yellow-spawn"/>
 	</apply>
 	<apply block="only-water" message="you may not break blocks in spawn!">
 		<region name="red-spawn"/>
@@ -136,11 +136,11 @@
 	<item>chainmail leggings</item>
 	<item>leather boots</item>
 	<item>redstone</item>
-	<item>cooked fish:1</item>
+	<item damage="1">cooked fish</item>
 	<item>gravel</item>
 	<item>quartz block</item>
 	<item>quartz stairs</item>
-	<item>step:7</item>
+	<item damage="7">step</item>
 	<item>stained clay</item>
 </itemremove>
 <toolrepair>
