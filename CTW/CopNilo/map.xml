@@ -11,19 +11,27 @@
     <contributor>TheGamer1220</contributor>
 </contributors>
 <teams>
-    <team color="gold" max="8">Orange Team</team>
-    <team color="dark_aqua" max="8">Cyan Team</team>
-    <team color="dark_purple" max="8">Purple Team</team>
-    <team color="green" max="8">Lime Team</team>
+    <team color="gold" max="8" max-overfill="12">Orange Team</team>
+    <team color="dark aqua" max="8" max-overfill="12">Cyan Team</team>
+    <team color="dark purple" max="8" max-overfill="12">Purple Team</team>
+    <team color="green" max="8" max-overfill="12">Lime Team</team>
 </teams>
 <spawns>
-    <spawns kit="spawn">
-        <spawn team="Orange" yaw="180"><cylinder base="676,4,1065" radius="5" height="0"/></spawn>
-        <spawn team="Cyan" yaw="0"><cylinder base="600,4,1065" radius="5" height="0"/></spawn>
-        <spawn team="Purple" yaw="180"><cylinder base="601,4,979" radius="5" height="0"/></spawn>
-        <spawn team="Lime" yaw="0"><cylinder base="677,4,979" radius="5" height="0"/></spawn>
-    </spawns>
-    <default yaw="270"><cylinder base="638,61,1025" radius="4" height="0"/></default>
+        <spawn team="Orange" yaw="180" kit="orange">
+            <cylinder base="676,4,1065" radius="5" height="0"/>
+        </spawn>
+        <spawn team="Cyan" yaw="0" kit="cyan">
+            <cylinder base="600,4,1065" radius="5" height="0"/>
+        </spawn>
+        <spawn team="Purple" yaw="180" kit="purple">
+			<cylinder base="601,4,979" radius="5" height="0"/>
+		</spawn>
+        <spawn team="Lime" yaw="0" kit="lime">
+			<cylinder base="677,4,979" radius="5" height="0"/>
+		</spawn>
+		<default yaw="270">
+			<cylinder base="638,61,1025" radius="4" height="0"/>
+		</default>
 </spawns>
 <kits>
     <kit name="spawn">
@@ -40,21 +48,21 @@
         <item slot="103">iron helmet</item>
         <item slot="102" enchantment="Proyectile Protection:1">chain chesplate</item>
     </kit>
-<kit name="Orange" parents="spawn">
-        <leggings color="cd0000">leather leggings</leggings>
-        <boots color="cd0000">leather boots</boots>
-    </kit>
-    <kit name="Cyan" parents="spawn">
-        <leggings color="0066cc">leather leggings</leggings>
-        <boots color="0066cc">leather boots</boots>
-<kit name="Purple" parents="spawn">
-        <leggings color="cd0000">leather leggings</leggings>
-        <boots color="cd0000">leather boots</boots>
-    </kit>
-    <kit name="Lime" parents="spawn">
-        <leggings color="0066cc">leather leggings</leggings>
-        <boots color="0066cc">leather boots</boots>
-    </kit>
+	<kit name="orange" parents="spawn">
+		<leggings color="cd0000">leather leggings</leggings>
+		<boots color="cd0000">leather boots</boots>
+	</kit>
+	<kit name="cyan" parents="spawn">
+		<leggings color="0066cc">leather leggings</leggings>
+		<boots color="0066cc">leather boots</boots>
+	<kit name="purple" parents="spawn">
+		<leggings color="cd0000">leather leggings</leggings>
+		<boots color="cd0000">leather boots</boots>
+	</kit>
+	<kit name="lime" parents="spawn">
+		<leggings color="0066cc">leather leggings</leggings>
+		<boots color="0066cc">leather boots</boots>
+	</kit>
 </kits>
 <regions>
     <union name="portals">
@@ -173,40 +181,40 @@
 <maxbuildheight>20</maxbuildheight>
 <wools>
     <wool team="Orange" color="purple">
-        <block location="678,5,1067"/>
+        <block>678,5,1067"</block>
     </wool>
     <wool team="Orange" color="cyan">
-        <block location="674,5,1067"/>
+        <block>674,5,1067<block/>
     </wool>
     <wool team="Orange" color="lime">
-        <block location="678,5,1063"/>
+        <block>678,5,1063</block>
     </wool>
     <wool team="Cyan" color="lime">
-        <block location="598,5,1067"/>
+        <block>598,5,1067<block/>
     </wool>
     <wool team="Cyan" color="orange">
-        <block location="602,5,1067"/>
+        <block>602,5,1067</block>
     </wool>
     <wool team="Cyan" color="purple">
-        <block location="598,5,1063"/>
+        <block>598,5,1063</block>
     </wool>
     <wool team="Purple" color="cyan">
-        <block location="599,5,981"/>
+        <block>599,5,981</block>
     </wool>
     <wool team="Purple" color="orange">
-        <block location="599,5,977"/>
+        <block>599,5,977</block>
     </wool>
     <wool team="Purple" color="lime">
-        <block location="603,5,977"/>
+        <block>603,5,977</block>
     </wool>
     <wool team="Lime" color="cyan">
-        <block location="679,5,977"/>
+        <block>679,5,977</block>
     </wool>
     <wool team="Lime" color="orange">
-        <block location="679,5,981"/>
+        <block>679,5,981</block>
     </wool>
     <wool team="Lime" color="purple">
-        <block location="675,5,977"/>
+        <block>675,5,977</block>
     </wool>
 </wools>
 </map>
