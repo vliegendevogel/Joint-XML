@@ -85,7 +85,7 @@
         <region name="blue-wool-rooms"/>
     </apply>
     <!-- Wool rooms red need to enter -->
-    <union>
+    <union name="red-wool-rooms">
         <rectangle min="-56,38" max="-48,46"/>
         <rectangle min="3,38" max="11,46"/>
     </union>
