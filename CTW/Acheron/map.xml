@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.3.3">
     <name>Acheron</name>
-    <verions>2.1.0</verions>
+    <verion>2.1.0</verion>
     <objective>Capture both the enemy wools</objective>
 
     <authors>
