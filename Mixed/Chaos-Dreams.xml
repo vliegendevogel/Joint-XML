@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>Chaos Dreams</name>
+<version>1.0.0</version>
+<objective>Destroy both enemy monuments and capture both their wools before they can do the same!</objective>
+<authors>
+    <author>Blaze_Attackk</author>
+</authors>
+<contributors>
+    <contributor contribution="XML">Elijahyap</contributor>
+</contributors>
+<rules>
+</rules>
+<teams>
+    <team color="yellow" max="30" max-overfill="40">Yellow Team</team>
+    <team color="blue" max="30" max-overfill="40">Blue Team</team>
+</teams>
+<spawns>
+    <default yaw="90" pitch="0">
+        <cuboid min="187,45.5,-628" max="190,45.5,-625"/>
+    </default>
+    <spawn team="Yellow Team" kit="Yellow"  yaw="-90" pitch="0">
+        <point>77.5,24,-626.5</point>
+    </spawn>
+    <spawn team="Blue Team" kit="Blue" yaw="90" pitch="0">
+        <point>299.5,24,-626.5</point>
+    </spawn>
+</spawns>
+<kits>
+    <!-- kit given to teams -->
+    <kit name="team">
+        <item slot="0">stone sword</item>
+        <item slot="1" enchantment="arrow infinite:190,45.5">bow</item>
+        <item slot="2">diamond pickaxe</item>
+        <item slot="3">diamond axe</item>
+        <item slot="4">diamond spade</item>
+        <item slot="6" amount="64" damage="1">wood</item>
+        <item slot="7" amount="2">golden apple</item>
+        <item slot="8" amount="64">cooked beef</item>
+        <item slot="28">arrow</item>
+        <potion duration="5" amplifier="1">heal</potion>
+        <potion duration="5">damage resistance</potion>
+    </kit>
+    <kit name="Blue" parents="team">
+        <helmet color="334cb2">leather helmet</helmet>
+        <chestplate color="334cb2">leather chestplate</chestplate>
+        <leggings color="334cb2">leather leggings</leggings>
+        <boots color="334cb2">leather boots</boots>
+    </kit>
+    <kit name="Yellow" parents="team">
+        <helmet color="e5e533">leather helmet</helmet>
+        <chestplate color="e5e533">leather chestplate</chestplate>
+        <leggings color="e5e533">leather leggings</leggings>
+        <boots color="e5e533">leather boots</boots>
+    </kit>
+</kits>
+<toolrepair>
+    <item>stone sword</item>
+    <item>bow</item>
+    <item>iron pickaxe</item>
+    <item>iron axe</item>
+    <item>iron spade</item>
+    <item>arrow</item>
+    <item>leather helmet</item>
+    <item>leather chestplate</item>
+    <item>leather leggings</item>
+    <item>leather boots</item>
+</toolrepair>
+<itemkeep>
+    <item>iron helmet</item>
+    <item>iron chestplate</item>
+    <item>iron leggings</item>
+    <item>iron boots</item>
+    <item>chainmail helmet</item>
+    <item>chainmail chestplate</item>
+    <item>chainmail leggings</item>
+    <item>chainmail boots</item>
+</itemkeep>
+<filters>
+    <filter name="blue-only">
+        <team>Blue Team</team>
+    </filter>
+    <filter name="yellow-only">
+        <team>Yellow Team</team>
+    </filter>
+</filters>
+<regions>
+    <!--    the unbuildable regions   -->
+    <union name="deny-areas">
+        <cuboid min="55,0,-707" max="138,32,-677"/>
+        <cuboid min="55,0,-654" max="135,32,-645"/>
+        <cuboid min="55,0,-608" max="135,32,-599"/>
+        <cuboid min="55,0,-576" max="138,32,-546"/>
+        <cuboid min="239,0,-707" max="322,32,-677"/>
+        <cuboid min="242,0,-654" max="322,32,-645"/>
+        <cuboid min="242,0,-608" max="322,32,-599"/>
+        <cuboid min="239,0,-576" max="322,32,-546"/>
+        <cuboid min="155,0,-578" max="222,32,-546"/>
+        <cuboid min="155,0,-707" max="222,32,-675"/>
+    </union>
+    <!--    the wool rooms    -->
+    <union name="yellow wool rooms">
+        <cuboid min="297,0,-596" max="322,32,-579"/>
+        <cuboid min="297,0,-674" max="322,32,-657"/>
+    </union>
+    <union name="blue wool rooms">
+        <cuboid min="55,0,-596" max="80,32,-579"/>
+        <cuboid min="55,0,-674" max="80,32,-657"/>
+    </union>
+    <!--    the playable region    -->
+    <complement name="playable">
+        <cuboid min="55,0,-707" max="322,32,-546"/>
+        <region name="deny-areas"/>
+    </complement>
+    <!--    spawn rooms    -->
+    <union name="spawns">
+        <cuboid name="yellow spawn" min="71,0,-633" max="84,32,-620"/>
+        <cuboid name="blue spawn" min="293,0,-633" max="306,32,-620"/>
+    </union>
+    <!--    no-build zones    -->
+    <apply block="deny-all" message="You may not place or break blocks outside of the map">
+        <negative>
+            <region name="playable"/>
+        </negative>
+    </apply>
+    <apply block="deny-all" message="You may not modify the centre island">
+        <cuboid min="179,0,-631" max="198,32,-622"/>
+    </apply>
+    <apply block="deny-all" message="You may not modify the spawns">
+        <region name="spawns"/>
+    </apply>
+    <!--    keep the teams out of each other's spawns    -->
+    <apply enter="blue-only" message="You may not enter the enemy spawn">
+        <region name="blue spawn"/>
+    </apply>
+    <apply enter="yellow-only" message="You may not enter the enemy spawn">
+        <region name="yellow spawn"/>
+    </apply>
+    <apply enter="blue-only" message="You may not enter your own wool room">
+        <region name="blue wool rooms"/>
+    </apply>
+    <apply enter="yellow-only" message="You may not enter your own wool room">
+        <region name="yellow wool rooms"/>
+    </apply>
+</regions>
+<killreward>
+    <item amount="1" name="`l`6Tokens" lore="`7Spend these Tokens at the Shop">nether star</item>
+</killreward>
+<destroyables>
+    <destroyable name="Right Monument" owner="Yellow Team" materials="obsidian;beacon">
+        <cuboid min="146,11,-557" max="147,14,-556"/>
+    </destroyable>
+    <destroyable name="Left Monument" owner="Yellow Team" materials="obsidian;beacon">
+        <cuboid min="146,11,-697" max="147,14,-696"/>
+    </destroyable>
+    <destroyable name="Right Monument" owner="Blue Team" materials="obsidian;beacon">
+        <cuboid min="230,11,-697" max="231,14,-696"/>
+    </destroyable>
+    <destroyable name="Left Monument" owner="Blue Team" materials="obsidian;beacon">
+        <cuboid min="230,11,-557" max="231,14,-556"/>
+    </destroyable>
+</destroyables>
+<wools>
+    <wool team="Yellow Team" color="purple">
+        <block>80.5,8,-631.5</block>
+    </wool>
+    <wool team="Yellow Team" color="lime">
+        <block>80.5,8,-621.5</block>
+    </wool>
+    <wool team="Blue Team" color="white">
+        <block>296.5,8,-621.5</block>
+    </wool>
+    <wool team="Blue Team" color="pink">
+        <block>296.5,8,-631.5</block>
+    </wool>
+</wools>
+</map>
