@@ -19,7 +19,7 @@
     <default yaw="90" pitch="0">
         <cuboid min="187,45.5,-628" max="190,45.5,-625"/>
     </default>
-    <spawn team="Yellow Team" kit="Yellow"  yaw="-90" pitch="0">
+    <spawn team="Yellow Team" kit="Yellow" yaw="-90" pitch="0">
         <point>77.5,24,-626.5</point>
     </spawn>
     <spawn team="Blue Team" kit="Blue" yaw="90" pitch="0">
@@ -30,7 +30,7 @@
     <!-- kit given to teams -->
     <kit name="team">
         <item slot="0">stone sword</item>
-        <item slot="1" enchantment="arrow infinite:190,45.5">bow</item>
+        <item slot="1" enchantment="arrow infinite">bow</item>
         <item slot="2">diamond pickaxe</item>
         <item slot="3">diamond axe</item>
         <item slot="4">diamond spade</item>
@@ -118,7 +118,7 @@
         <cuboid name="blue spawn" min="293,0,-633" max="306,32,-620"/>
     </union>
     <!--    no-build zones    -->
-    <apply block="deny-all" message="You may not place or break blocks outside of the map">
+    <apply block="deny-world" message="You may not place or break blocks outside of the map">
         <negative>
             <region name="playable"/>
         </negative>
