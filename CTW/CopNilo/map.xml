@@ -7,8 +7,8 @@
     <author>LessFruit</author>
 </authors>
 <contributors>
-    <contributor contribution>Gaporingo</contributor>
-    <contributor contribution>TheGamer1220</contributor>
+    <contributor>Gaporingo</contributor>
+    <contributor>TheGamer1220</contributor>
 </contributors>
 <teams>
     <team color="gold" max="8">Orange Team</team>
@@ -36,7 +36,7 @@
         <item slot="5" amount="16">glass</item>
         <item slot="6" amount="32">cooked salmon</item>
         <item slot="8" amount="4">golden nugget</item>
-        <item slot="30" enchantment="Unbreaking:2;Efficiency:1;Silk Touch:1>iron shovel</item>
+        <item slot="30" enchantment="Unbreaking:2;Efficiency:1;Silk Touch:1">iron shovel</item>
         <item slot="103">iron helmet</item>
         <item slot="102" enchantment="Proyectile Protection:1">chain chesplate</item>
     </kit>
