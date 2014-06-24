@@ -97,11 +97,13 @@
         </filter>
     </filters>
     <regions>
-         <union name="woolrooms">
-            <cylinder name="green" base="129,9,1178" radius="10" height="37"/>
-            <cylinder name="pink" base="235.5,19,1178.5" radius="10" height="37"/>
+         <union name="woolrooms-blue">
             <cylinder name="purple" base="129.5,19,1086" radius="10" height="37"/>
             <cylinder name="orange" base="235.5,19,1086.5" radius="10" height="37"/>
+        </union>
+        <union name="woolrooms-green">
+            <cylinder name="green" base="129,9,1178" radius="10" height="37"/>
+            <cylinder name="pink" base="235.5,19,1178.5" radius="10" height="37"/>
         </union>
 
         <union name="jump-pads">
@@ -126,17 +128,16 @@
         </apply>
 
         <apply enter="only-blue" message="You may not enter your won wool room!">
-            <region name="orange"/>
-            <region name="purple"/>
+            <region name="woolrooms-blue"/>
         </apply>
 
         <apply enter="only-green" message="You may not enter your won wool room!">
-            <region name="pink"/>
-            <region name="green"/>
+            <region name="woolrooms-green"/>
         </apply>
 
         <apply block="only-cobwebs" message="You may not edit the wool room!">
-            <region name="woolrooms"/>
+            <region name="woolrooms-blue"/>
+            <region name="woolrooms-green"/>
         </apply>
 
         <apply block="only-iron" message="You may only break iron in the spawns!">
