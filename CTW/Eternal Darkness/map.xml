@@ -102,9 +102,7 @@
         <region name="red-wool-rooms"/>
     </apply>
     <apply block="no-spawners" message="You may not edit spawners!">
-         <rectangle min="-73,-26" max="-44,25"/>
-         <rectangle min="-12,-19" max="13,18"/>
-         <rectangle min="45,-26" max="73,25"/>
+         <rectangle min="oo,oo" max="-oo,-oo"/>
     </apply>
 </regions>
 <wools>
