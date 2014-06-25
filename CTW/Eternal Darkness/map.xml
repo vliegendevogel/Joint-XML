@@ -97,6 +97,20 @@
         <region name="red-wool-rooms"/>
     </apply>
 </regions>
+<wools>
+    <wool team="blue" color="cyan">
+        <block>-2,16,105</block>
+    </wool>
+    <wool team="blue" color="green">
+        <block>2,16,105</block>
+    </wool>
+    <wool team="red" color="magenta">
+        <block>2,16,-107</block>
+    </wool>
+    <wool team="red" color="yellow">
+        <block>-2,16,-107</block>
+    </wool>
+</wools>
 <killreward>
     <item amount="12">arrow</item>
 </killreward>
