@@ -129,7 +129,7 @@
     <item>chainmail helmet</item>
     <item>leather chestplate</item>
     <item>leather leggings</item>
-    <iteam>leather boots</iteam>
+    <item>leather boots</iteam>
     <item>golden carrot</item>
 </itemremove>
 <timelock>on</timelock>
