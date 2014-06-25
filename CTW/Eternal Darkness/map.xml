@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>Eternal Darkness</name>
+<version>1.0.0</version>
+<objective>
+    Capture both of the enemy's wools and place them on your victory monument
+</objective>
+<authors>
+    <author>jollee999</author>
+</authors>
+<contributors>
+    <contributor contribution="Construction Help">Draco_Rogue</contributor>
+    <contributor contribution="XML">orky48</contributor>
+</contributors>
+<teams>
+    <team color="blue" max="16">Blue Team</team>
+    <team color="dark red" max="16">Red Team</team>
+</teams>
+<kits>
+    <kit name="spawn">
+        <item slot="0" damage="-3000">iron sword</item>
+        <item slot="1" damage="-3000">bow</item>
+        <item slot="28" amount="32">arrow</item>
+        <item slot="2" enchantment="dig speed:1" damage="-3000">iron pickaxe</item>
+        <item slot="4" amount="4">torch</item>
+        <item slot="5" amount="32">wood</item>
+        <item slot="6" amount="64">golden carrot</item>
+        <helmet damage="-3000">chainmail helmet</helmet>
+        <potion amplifier="1" duration="4">heal</potion>
+    </kit>
+    <kit name="blue" parent="spawn">
+        <item slot="3" damage="11" damage="-3000">stained clay</item>
+        <chestplate color="334CB2" damage="-3000">leather chestplate</chestplate>
+        <leggings color="334CB2" damage="-3000">leather leggings</leggings>
+        <boots color="334CB2" damage="-3000">leather boots</boots>
+    </kit>
+    <kit name="red" parent="spawn">
+        <item slot="3" damage="14">stained clay</item>
+        <chestplate color="993333" damage="-3000">leather chestplate</chestplate>
+        <leggings color="993333" damage="-3000">leather leggings</leggings>
+        <boots color="993333" damage="-3000">leather boots</boots>
+    </kit>
+</kits>
+<spawns>
+    <spawn team="blue" kit="blue" yaw="180">
+        <point>0,15,108</point>
+    </spawn>
+    <spawn team="red" kit="red" yaw="0">
+        <point>0,15,-110</point>
+    </spawn>
+    <default yaw="180">
+        <point>0,60,-2</point>
+    </default>
+</spawns>
+<filters>
+    <filter name="no-void">
+        <deny><void/></deny>
+    </filter>
+    <filter name="only-blue">   
+        <team>blue</team>
+    </filter>
+    <filter name="only-red">
+        <team>red</team>
+    </filter>
+</filters>
+<regions>
+    <apply block="no-void" message="You may not build in the void!">
+        <negative>
+            <rectangle min="-73,-26" max="-44,25"/>
+            <rectangle min="-12,-19" max="13,18"/>
+            <rectangle min="45,-26" max="73,25"/>
+        </negative>
+    </apply>
+    <union name="spawns">
+        <!-- Blue spawn -->
+        <circle center="0,108" radius="9"/>
+        <!-- Red spawn -->
+        <circle center="0,-2" radius="9"/>
+    </union>
+    <apply block="deny-world" message="You may not edit the spawns!">
+        <region name="spawns"/>
+    </apply>
+    <!-- Wools blue need to get -->
+    <union name="blue-wool-rooms">
+        <circle center="-44,-94" radius="6"/>
+        <circle center="44,-94" radius="6"/>
+    </union>
+    <apply block="only-blue" mesage="Only blue may interact with this map!">
+        <region name="blue-wool-rooms"/>
+    </apply>
+    <!-- Wools red need to get -->
+    <union name="red-wool-rooms">
+        <circle center="44,92" radius="6"/>
+        <circle center="-44,92" radius="6"/>
+    </union>
+    <apply block="only-red" mesage="Only red may interact with this map!">
+        <region name="red-wool-rooms"/>
+    </apply>
+</regions>
+<killreward>
+    <item amount="12">arrow</item>
+</killreward>
+<itemremove>
+    <item>iron sword</item>
+    <item>iron pickaxe</item>
+    <item>bow</item>
+    <item>chainmail helmet</item>
+    <item>leather chestplate</item>
+    <item>leather leggings</item>
+    <iteam>leather boots</iteam>
+    <item>golden carrot</item>
+</itemremove>
+<timelock>on</timelock>
+<maxbuildheight>30</maxbuildheight>
+</map>
