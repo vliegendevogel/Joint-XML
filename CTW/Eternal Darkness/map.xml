@@ -62,6 +62,11 @@
     <filter name="only-red">
         <team>red</team>
     </filter>
+    <filter name="no-spawners">
+        <not>
+            <block>mob spawner</block>
+        </not>
+    </filter>
 </filters>
 <regions>
     <apply block="no-void" message="You may not build in the void!">
@@ -85,7 +90,7 @@
         <circle center="-44,-94" radius="6"/>
         <circle center="44,-94" radius="6"/>
     </union>
-    <apply block="only-blue" mesage="Only blue may interact with this map!">
+    <apply block="only-blue" message="Only blue may interact with this this part of the map!">
         <region name="blue-wool-rooms"/>
     </apply>
     <!-- Wools red need to get -->
@@ -93,8 +98,13 @@
         <circle center="44,92" radius="6"/>
         <circle center="-44,92" radius="6"/>
     </union>
-    <apply block="only-red" mesage="Only red may interact with this map!">
+    <apply block="only-red" message="Only red may interact with this part of the map!">
         <region name="red-wool-rooms"/>
+    </apply>
+    <apply block="no-spawners" message="You may not edit spawners!">
+         <rectangle min="-73,-26" max="-44,25"/>
+         <rectangle min="-12,-19" max="13,18"/>
+         <rectangle min="45,-26" max="73,25"/>
     </apply>
 </regions>
 <wools>
