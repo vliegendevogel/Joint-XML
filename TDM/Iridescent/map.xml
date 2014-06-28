@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<map proto="1.3.2">
+<map proto="1.3.3">
 	<name>Iridescent</name>
 	<version>1.0</version>
 	<objective>Be the team with the most amount of kills after 10 mins to win</objective>
@@ -94,15 +94,11 @@
 	</score>
 
 	<filters>
-		<filter name="only-light-blue" parents="deny-all">
-			<allow>
-				<team>Blue Team</team>	
-			</allow>
+		<filter name="only-light-blue">
+			<team>Blue Team</team>	
 		</filter>
-		<filter name="only-lime" parents="deny-all">
-			<allow>
-				<team>Lime Team</team>	
-			</allow>
+		<filter name="only-lime">
+			<team>Lime Team</team>	
 		</filter>
 	</filters>
 
@@ -145,7 +141,7 @@
 	</portals>
 
 	<disabledamge>
-		<damage>entity_attack</damage>
+		<damage>entity attack</damage>
 		<damage>fall</damage>
 	</disabledamge>
 
