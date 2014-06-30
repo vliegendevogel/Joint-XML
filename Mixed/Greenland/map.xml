@@ -78,7 +78,7 @@
 		</apply>
 	</regions>
 	<portals>
-		<portal x="@-23" y="@9" z="@-97" filter="only-red"> <!--red to reight mon-->
+		<portal x="@-23" y="@9" z="@-97" filter="only-red"> <!--red to right mon-->
 			<cuboid min="-4,7,-119" max="-5,10,-122"/>
 		</portal>
 		<portal x="@24" y="@9" z="@-96" filter="only-red"> <!--red to left mon-->
