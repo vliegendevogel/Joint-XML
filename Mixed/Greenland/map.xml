@@ -16,7 +16,7 @@
 			<item slot="2" enchantment="dig speed:1">diamond pickaxe</item>
 			<item slot="3" enchantment="damage all:1">shears</item>		
 			<item slot="6" amount="32">apple</item>
-			<item slot="7" amount="32">laves 2</item>
+			<item slot="7" amount="32">leaves 2</item>
 			<item slot="8">golden apple</item>
 			<item slot="28">arrow</item>
 		</kit>
