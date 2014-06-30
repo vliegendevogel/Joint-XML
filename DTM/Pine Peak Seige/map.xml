@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>Pine Peak Seige</name>
+<version>1.0.1</version>
+<objective>
+    Attackers must destroy both crystals within 30 minutes whilst defenders must prevent them.
+</objective>
+<authors>
+    <author>PhoenixMatt</author>
+</authors>
+<contributors>
+    <contributor contribution="XML">orky48</contributor>
+</contributors>
+<teams>
+    <team color="blue" max="??">Defenders</team>
+    <team color="dark red" max="??">Attackers</team>
+</teams>
+<kits>
+    <kit name="attackers">
+        <item slot="0">iron sword</item>
+        <item slot="1" enchantment="arrow infinite:1">bow</item>
+        <item slot="28">arrow</item>
+        <item slot="2" enchantment="dig speed:2;durability:3">iron pickaxe</item>
+        <item slot="3" enchantment="dig speed:2;durability:3">iron axe</item>
+        <item slot="4" amount="64">pumpkin pie</item>
+        <item slot="5" amount="2">golden apple</item>
+        <item slot="6" amount="64">vine</item>
+        <item slot="33">bucket</item>
+        <item slot="7" amount="64">log 2</item>
+        <item slot="8" amount="64" damage="14">stained glass</item>
+        <helmet color="993333">leather helmet</helmet>
+        <chestplate enchantment="protection projectile">iron chestplate</chestplate>
+        <leggings>iron leggings</leggings>
+        <boots>iron boots</boots>
+    </kit>
+    <kit name="melee">
+        <item slot="0">iron sword</item>
+        <item slot="1">bow</item>
+        <item slot="2">iron pickaxe</item>
+        <item slot="3">iron axe</item>
+        <item slot="4" amount="64">pumpkin pie</item>
+        <item slot="5" amount="8">golden apple</item>
+        <item slot="7" amount="64">log</item>
+        <item slot="8" amount="64" damage="3">stained glass</item>
+        <item slot="34">bucket</item>
+        <item slot="35" amount="64">arrow</item>
+        <item slot="36" amount="64">arrow</item>
+        <helmet>chainmail helmet</helmet>
+        <chestplate>diamond chestplate</chestplate>
+        <leggings>chainmail leggings</leggings>
+        <boots>chainmail boots</boots>
+    </kit>
+    <kit name="ranged">
+        <item slot="0" enchantment="knockback:2">stone sword</item>
+        <item slot="1" enchantment="arrow damage:1;arrow knockback:1;arrow infinite:1">bow</item>
+        <item slot="2" enchantment="dig speed:2;durability:3">iron pickaxe</item>
+        <item slot="3" enchantment="dig speed:2;durability:3">iron axe</item>
+        <item slot="4" amount="64">pumpkin pie</item>
+        <item slot="1" damage="8227" potions="health boost:10:3:false;danage resistence:10:3:false">potion</item>
+        <item slot="7" amount="64">log</item>
+        <item slot="8" amount="64" damage="3">stained glass</item>
+        <item slot="33" amount="64">ladder</item>
+        <item slot="34">bucket</item>
+        <helmet>chainmail helmet</helmet>
+        <chestplate enchantment="protection projectile">iron chestplate</chestplate>
+        <leggings>chainmail leggings</leggings>
+        <boots>diamond boots</boots>
+    </kit>
+</kits>
+<spawns>
+    <spawn team="defenders" yaw="0">
+        <point>-549,128,-155</point>
+    </spawn>
+    <spawn team="attackers" yaw="180">
+        <point>-399,57,-97</point>
+    </spawn>
+    <default>
+        <point>-456,158,-73</point>
+    </default>
+</spawns>
+<filters>
+    <filter name="no-void">
+        <deny>
+            <void/>
+        </deny>
+    </filter>
+</filters>
+<regions>
+    <apply block="no-void" message="You may not build in the void!"/>
+    <union name="spawns">
+        <cuboid name="defenders-spawn" min="-523,97,-143" max="-515,105,-137"/>
+        <cuboid name="attackers-spawn" min="-401,56,-100" max="-295,63,-94"/>
+    </union>
+    <apply block="deny-world" message="You may not edit the spawns!">
+        <region name="spawns"/>
+    </apply>
+    <apply kit="ranged">
+        <cuboid name="range-portal" min="-543,129,-159" max="-542,132,-157"/>
+    </apply>
+    <apply kit="melee">
+        <cuboid name="melee-portal" min-"-543,129,-542" max="-542,132,-540"/>
+    </apply>
+</regions>
+<portals>
+    <portal x="@-520" y="@98" z="@-141" yaw="0">
+        <region name="melee-portal"/>
+        <region name="range-portal"/>
+    </portal>
+</portals>
+<destroyables owner="defenders">
+    <destroyable name="Emerald Crystal" materials="emerald block">
+        <cuboid min="-475,97,-109" max="-478,108,-106"/>
+    </destroyable>
+    <destroyable name="Sapphire Crystal" materials="lapis block">
+        <cuboid min="-521,100,-110" max="-524,110,-107"/>
+    </destroyable>
+</destroyables>
+<time result="defenders">30m</time>
+<maxbuildheight>160</maxbuildheight>
+<itemremove>
+    <item enchantment="arrow damage:1;arrow knockback:1;arrow infinite:1">bow</item>
+    <item>diamond boots</item>
+    <item>diamond chestplate</item>
+    <item>leather helmet</item>
+    <item>iron chestplate</item>
+    <item>iron leggings</item>
+    <item>iron boots</item>
+    <item damage="8227" potions="health boost:10:3:false;danage resistence:10:3:false">potion</item>
+    <item>log</item>
+    <item>log 2</item>
+    <item>chainmail helmet</item>
+    <item>chainmail leggings</item>
+    <item>chainmail boots</item>
+    <item>pumpkin pie</item>
+</itemremove>
+<toolrepair>
+    <tool>iron sword</tool>
+    <tool>bow</tool>
+    <tool>iron pickaxe</tool>
+    <tool>iron axe</tool>
+</toolrepair>
+<killreward>
+    <item>golden apple</item>
+</killreward>
+</map>
