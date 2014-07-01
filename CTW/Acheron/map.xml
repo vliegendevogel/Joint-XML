@@ -3,13 +3,11 @@
     <name>Acheron</name>
     <verion>2.1.0</verion>
     <objective>Capture both the enemy wools</objective>
-
     <authors>
         <author contribution="Main Map Building and XML">Captain_Elliott</author>
         <author contribution="Map builder and Aesthetics">titandigger</author>
         <author contribution="Map Builder and Feedback">Ozillion</author>
     </authors>
-
     <contributors>
         <contributor contribution="Feedback">Lexar500</contributor>
         <contributor contribution="Feedback and Minior Building">pwnedrs</contributor>
@@ -17,7 +15,6 @@
         <contributor contribution="Building spawn">cookey29</contributor>
         <contributor contribution="V1 XML Fixing and tonnes of help and feeback">ItsMiiOlly</contributor>
     </contributors>
-
     <include src="tutorial.xml"/>
     <tutorial>
         <stage title="CTW">
@@ -40,12 +37,10 @@
             <line>Place the wools you retrieved from the wool room here.</line>
         </stage>
     </tutorial>
-
     <teams>
         <team color="blue" max="45" max-overfill="50">Blue Team</team>
         <team color="green" max="45" max-overfill="50">Green Team</team>
     </teams>
-
     <kits>
         <kit name="spawn">
             <item slot="0">iron sword</item>
@@ -53,9 +48,9 @@
             <item slot="2">diamond pickaxe</item>
             <item slot="3" enchantment="durability:1;dig speed:1">iron shovel</item>
             <item slot="4" enchantment="durability:1;dig speed:1">iron axe</item>
-            <item slot="5" amount="32">spruce log</item>
+            <item slot="5" amount="32" damage="1">log</item>
             <item slot="6" amount="64">glass</item>
-            <item slot="7" amount="64" damage="5">159</item><!--Stained clay-->
+            <item slot="7" amount="64" damage="5">stained clay</item>
             <item slot="8" amount="64">steak</item>
             <item slot="9">arrow</item>
         </kit>
@@ -66,7 +61,6 @@
             <helmet color="7f3fb2">leather helmet</helmet>
         </kit>
     </kits>
-
     <spawns>
         <spawn team="blue" yaw="-180" safe="true">
             <cuboid min="180,9,1270" max="185,11,1275"/>
@@ -78,7 +72,6 @@
             <cylinder base="291,61,1132" radius="3" height="0"/>
         </default>
     </spawns>
-
     <filters>
         <filter name="only-blue">
             <team>blue</team>
@@ -92,8 +85,10 @@
         <filter name="only-iron">
             <block>iron block</block>
         </filter>
-        <filter name="no-void" parents="allow-all">
-            <deny><void/></deny>
+        <filter name="no-void">
+            <deny>
+                <void/>
+            </deny>
         </filter>
     </filters>
     <regions>
@@ -105,7 +100,6 @@
             <cylinder name="green" base="129,9,1178" radius="10" height="37"/>
             <cylinder name="pink" base="235.5,19,1178.5" radius="10" height="37"/>
         </union>
-
         <union name="jump-pads">
             <!--Green-->
             <block>176,10,1057</block>
@@ -122,34 +116,27 @@
             <block>211,9,1185</block>
             <block>153,9,1185</block>
         </union>
-
         <apply block-place="no-void" message="You may not place blocks here!">
             <rectangle min="250,1036" max="115,1229"/>
         </apply>
-
         <apply enter="only-blue" message="You may not enter your won wool room!">
             <region name="woolrooms-blue"/>
         </apply>
-
         <apply enter="only-green" message="You may not enter your won wool room!">
             <region name="woolrooms-green"/>
         </apply>
-
         <apply block="only-cobwebs" message="You may not edit the wool room!">
             <region name="woolrooms-blue"/>
             <region name="woolrooms-green"/>
         </apply>
-
         <apply block="only-iron" message="You may only break iron in the spawns!">
             <cuboid name="green-spawn" min="144,1,980" max="221,31,1107"/>
             <cuboid name="blue-spawn" min="221,1,1285" max="144,31,1257"/>
         </apply>
-
         <apply block="deny-blocks" message="You may not edit the portals!">
             <cuboid name="blue-main" min="186,9,1228" max="179,14,1231"/>
             <cuboid name="green-main" min="179,9,1037" max="186,14,1034"/>
         </apply>
-
         <apply block="deny-blocks" enter="only-blue" message="You may not edit the shoots!">
             <cuboid name="blue-1" min="187,8,1296" max="190,22,1209"/>
             <cuboid name="blue-2" min="178,8,1209" max="175,22,1206"/>
@@ -158,7 +145,6 @@
             <cuboid name="blue-purple" min="210,9,1187" max="213,22,1184"/>
             <cuboid name="blue-green" min="152,9,1184" max="155,22,1187"/>
         </apply>
-
         <apply block="deny-blocks" enter="only-green" message="You may not edit the shoot!">
             <cuboid name="green-1" min="187,8,1056" max="190,22,1059"/>
             <cuboid name="green-2" min="178,8,1956" max="175,22,1058"/>
@@ -167,13 +153,10 @@
             <cuboid name="green-pink" min="155,9,1078" max="152,22,1081"/>
             <cuboid name="green-orange" min="213,9,1081" max="210,22,1078"/>
         </apply>
-
         <apply velocity="@0.0,2.0,0.0">
             <region name="jump-pads"/>
         </apply>
-
     </regions>
-
     <portals>
         <portal z="36" filter="only-green"> <!--Green Spawn to Green main-->
             <block>182,9,1001</block>
@@ -181,16 +164,13 @@
         <portal z="-35" filter="only-green"> <!--Green main to Green Spawn-->
             <cuboid min="181,9,1035" max="184,11,1034"/>
         </portal>
-
         <portal z="37" filter="only-blue"> <!--blue spawn to blue main-->
             <block>182,9,1263</block>
         </portal>
-
         <portal z="-35" filter="only-blue"> <!--Blue main to spawn-->
             <cuboid min="184,9,1230" max="181,11,1231"/>
         </portal>
     </portals>
-
     <wools>
         <wools team="green">
             <wool color="lime">
