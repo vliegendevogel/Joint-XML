@@ -31,8 +31,8 @@
 		</kit>
 	</kits>
 	<teams>
-		<team color="blue" max="16" max-overfill="18">Blue Team</team>
-		<team color="red" max="16" max-overfill="18">Red Team</team>
+		<team color="blue" max="" max-overfill="">Blue Team</team><!--Need Team Sizes-->
+		<team color="red" max="" max-overfill="">Red Team</team><!--Need Team Sizes-->
 	</teams>
 	<spawns>
 		<spawn team="red" kit="red" yaw="0">
