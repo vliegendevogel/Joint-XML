@@ -3,7 +3,6 @@
 <name>Star Jumper</name> 
 <version>1.0.0</version> 
 <objective>The team who gets the most kills in 5 minutes wins.</objective>
-
 <authors>
     <author>manucide</author> 
 </authors>
@@ -15,7 +14,7 @@
 	<team color="blue" max="16" max-overfill="18">Blue Team</team>
 </teams>
 <kits>
- <kit name="spawn">
+	<kit name="spawn">
 		<item slot="0" name="`5`l`nMagic Stick" item enchantment="knockback:5">stick</item>
 		<item slot="1" name="`b`l`nWindthrower" item enchantment="arrow_infinite:1">bow</item>
 		<item slot="8" name="`e`lCheeseburger" amount="64">baked_potato</item>
@@ -64,16 +63,12 @@
 <gamerules>
  <doDaylightCycle>false</doDaylightCycle>
 </gamerules>
-<filters>
- <filter name="deny-blocks">
- </filter>
-</filters>
 <spawns>
- <spawn team="Red Team" kit="red" yaw="179"
-  <block="0 1 66">
+ <spawn team="Red Team" kit="red" yaw="179">
+  <block>0 1 66</block>
  </spawn>
- <spawn team="Blue Team" kit="blue" yaw="0"
-  <block="0 1 -66">
+ <spawn team="Blue Team" kit="blue" yaw="0">
+  <block>0 1 -66</block>
  </spawn>
  </spawns>
 <regions>
@@ -90,3 +85,4 @@
   <cylinder base="33, 5, 33" radius="1" height="25">
  </apply>
 </regions>
+</map>
