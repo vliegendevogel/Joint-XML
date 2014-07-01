@@ -117,7 +117,9 @@
             <block>153,9,1185</block>
         </union>
         <apply block-place="no-void" message="You may not place blocks here!">
-            <rectangle min="250,1036" max="115,1229"/>
+            <negative>
+                <rectangle min="250,1036" max="115,1229"/>
+            </negative>
         </apply>
         <apply enter="only-blue" message="You may not enter your won wool room!">
             <region name="woolrooms-blue"/>
