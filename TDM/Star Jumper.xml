@@ -15,8 +15,8 @@
 </teams>
 <kits>
 	<kit name="spawn">
-		<item slot="0" name="`5`l`nMagic Stick" item enchantment="knockback:5">stick</item>
-		<item slot="1" name="`b`l`nWindthrower" item enchantment="arrow_infinite:1">bow</item>
+		<item slot="0" name="`5`l`nMagic Stick" enchantment="knockback:5">stick</item>
+		<item slot="1" name="`b`l`nWindthrower" enchantment="arrow_infinite:1">bow</item>
 		<item slot="8" name="`e`lCheeseburger" amount="64">baked_potato</item>
 		<item slot="28">arrow</item>
 		<potion duration="oo" amplifier="2" ambient="true">speed</potion>
