@@ -29,6 +29,14 @@
             <item slot="4" amount="32" damage="11">stained clay</item>
             <item slot="5" amount="32" damage="11">stained glass</item>
         </kit>
+        <kit name="no-fall" potion-particles="false">
+            <potion duration="oo" amplifier="10" ambient="true">damage resistance</potion>
+            <potion duration="oo" amplifier="10" ambient="true">regeneration</potion>
+        </kit>
+        <kit name="remove-potion" potion-particles="false">
+            <potion duration="1" amplifier="10" ambient="true">damage resistance</potion>
+            <potion duration="1" amplifier="10" ambient="true">regeneration</potion>
+        </kit>
     </kits>
     <teams>
         <team color="blue" max="16" max-overfill="18">Blue Team</team>
@@ -75,6 +83,18 @@
         </apply>
         <apply enter="only-red" message="You may not enter the other teams spawn area!">
             <region name="red-spawn"/>
+        </apply>
+        <!--stops them taking damage when they are in spawn-->
+        <apply kit="no-fall">
+            <region name="blue-spawn"/>
+            <region name="red-spawn"/>
+        </apply>
+        <!--Remove the potions when they leave spawn-->
+        <apply kit="remove-potions">
+            <negative>
+                <region name="blue-spawn"/>
+                <region name="red-spawn"/>
+            </negative>
         </apply>
     </regions>
     <portals>
