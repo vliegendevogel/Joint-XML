@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>Star Jumper</name> 
+<version>1.0.0</version> 
+<objective>The team who gets the most kills in 5 minutes wins.</objective>
+
+<authors>
+    <author>manucide</author> 
+</authors>
+<contributors>
+	<contributor contribution="Helped on decoration">FlawlessAngel</contributor>
+</contributors>
+<teams>
+	<team color="dark red" max="16" max-overfill="18">Red Team</team>
+	<team color="blue" max="16" max-overfill="18">Blue Team</team>
+</teams>
+<kits>
+ <kit name="spawn">
+		<item slot="0" name="`5`l`nMagic Stick" item enchantment="knockback:5">stick</item>
+		<item slot="1" name="`b`l`nWindthrower" item enchantment="arrow_infinite:1">bow</item>
+		<item slot="8" name="`e`lCheeseburger" amount="64">baked_potato</item>
+		<item slot="28">arrow</item>
+		<potion duration="oo" amplifier="2" ambient="true">speed</potion>
+		<potion duration="oo" amplifier="1" ambient="true">jump</potion>
+		<potion duration="oo" ambient=true>night vision</potion>
+	</kit>
+ <kit name="red" parents="spawn">
+		<chestplate color="993333">leather chestplate</chestplate>
+		<leggings color="993333">leather leggings </leggings>
+	</kit>
+ <kit name="blue" parents="spawn">
+	<chestplate color="334CB2">leather chestplate</chestplate>
+	<leggins color="334CB2">leather leggins </leggins>
+	</kit>
+</kits>
+<score>
+ <time>600</time>
+ <limit>-1</limit>
+</score>
+<itemremove>
+ <item>baked_potato</item>
+ <item>bone</item>
+</itemremove>
+<toolrepair>
+ <tool>bow</tool>
+ <tool>leather leggings</tool>
+ <tool>leather chestplate</tool>
+ </toolrepair>
+<itemkeep>
+  <item>iron helmet</item>
+  <item>leather boots</item>
+ </itemkeep>
+<disabledamage>
+ <damage>fall</damage>
+</disabledamage>
+<mobs>
+<filter>
+  <spawn>spawner</spawn>
+ </filter>
+</mobs>
+<killreward>
+ <item amount="1">arrow</item>
+</killreward>
+<gamerules>
+ <doDaylightCycle>false</doDaylightCycle>
+</gamerules>
+<filters>
+ <filter name="deny-blocks">
+ </filter>
+</filters>
+<spawns>
+ <spawn team="Red Team" kit="red" yaw="179"
+  <block="0 1 66">
+ </spawn>
+ <spawn team="Blue Team" kit="blue" yaw="0"
+  <block="0 1 -66">
+ </spawn>
+ </spawns>
+<regions>
+ <apply velocity="@0,1.5,0">  
+  <cylinder base="33, 5, -33" radius="1" height="25">
+ </apply>
+ <apply velocity="@0,1.5,0">
+  <cylinder base="-33, 5, -33" radius="1" height="25">
+ </apply>
+ <apply velocity="@0,1.5,0">
+  <cylinder base="-33, 5, 33" radius="1" height="25">
+ </apply>
+ <apply velocity="@0,1.5,0">
+  <cylinder base="33, 5, 33" radius="1" height="25">
+ </apply>
+</regions>
