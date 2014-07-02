@@ -6,11 +6,11 @@
     Take the wool from the enemy wool rooms and place it on your victory monument while defending your own wool.
 </objective>
 <authors>
-    <author>Kaumila</author>
-    <author>BlockDrop74</author>
-    <author>RuvDatRice</author>
+    <author contribution="Main Design">Kaumila</author>
+    <author contribution="Detailing">BlockDrop74</author>
 </authors>
 <contributors>
+    <contributor contribution="Feedback">RuvDatRice</contributor>
     <contributor contribution="XML">lord_creeper01</contributor>
 </contributors>
 <teams>
