@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <map proto="1.3.3">
 <name>Clay Canyon</name>
 <version>1.4.4</version>
@@ -5,110 +6,111 @@
     Be the team with the most points after 10 minutes
 </objective>
 <authors>
-	<author>OctoOzone</author>
-	<author>cswhite2000</author>
+    <author>OctoOzone</author>
+    <author>cswhite2000</author>
 </authors>
 <contributors>
-	<contributor contributation="XML">Captain_Elliott</contributor>
-	<contributor contributation="server and feedback">ravi60</contributor>
+    <contributor contributation="XML">Captain_Elliott</contributor>
+    <contributor contributation="server and feedback">ravi60</contributor>
 </contributors>
 <include src="tutorial.xml"/>
 <tutorial>
-	<stage title="Gamemode">
-		<message>
-			<line>This is a `cTeam Deathmatch `2[TDM] `rGamemode</line>
-			<line>Each enemy kill gains `11 `rPoint</line>
-		</message>
-	</stage>
-	<stage title="Scoreboxes">
-		<message>
-			<line>You can also score points by running into the enemy teams `3scorebox</line>
-			<line>`rEach scorebox will gain your team `63 `rpoints</line>
-		</message>
-		<teleport>
-			<point yaw="-180">478,127,416</point>
-		</teleport>
-	</stage>
+    <stage title="Gamemode">
+	    <message>
+            <line>This is a `cTeam Deathmatch `2[TDM] `rGamemode</line>
+            <line>Each enemy kill gains `11 `rPoint</line>
+        </message>
+    </stage>
+    <stage title="Scoreboxes">
+        <message>
+            <line>You can also score points by running into the enemy teams `3scorebox</line>
+            <line>`rEach scorebox will gain your team `63 `rpoints</line>
+        </message>
+        <teleport>
+            <point yaw="-180">478,127,416</point>
+        </teleport>
+    </stage>
 </tutorial>
 <teams>
-	<team color="blue" max="16" max-overfill="20">Blue Team</team>
-	<team color="dark red" max="16" max-ovefill="20">Red Team</team>
+    <team color="blue" max="16" max-overfill="20">Blue Team</team>
+    <team color="dark red" max="16" max-ovefill="20">Red Team</team>
 </teams>
 <kits>
-	<kit name="spawn" force="true">
-		<item slot="0" damage="-3000">iron sword</item>
-		<item slot="1" damage="-3000">bow</item>
-		<item slot="2" amount="64">cooked beef</item>
-		<item slot="8" amount="2">golden appel</item>
-		<item slot="28" amount="64">arrow</item>
-	</kit>
-	<kit name="red" parent="spawn">
-		<helmet color="993333" damage="-3000">leather helmet</helmet>
-		<chestplate damage="-3000">iron chestplate</chestplate>
-		<leggings color="993333" damage="-3000">leatheer leggings</leggings>
-		<boots damage="-3000">chainmail boots</boots>
-	</kit>
-	<kit name="blue" parent="spawn">
-		<helmet color="334CB2" damage="-3000">leather helmet</helmet>
-		<chestplate damage="-3000">iron chestplate</chestplate>
-		<leggings color="334CB2" damage="-3000">leather leggings</leggings>
-		<boots damage="-3000">chainmail boots</boots>
-	</kit>
+    <kit name="spawn" force="true">
+        <item slot="0" damage="-3000">iron sword</item>
+        <item slot="1" damage="-3000">bow</item>
+        <item slot="2" amount="64">cooked beef</item>
+        <item slot="8" amount="2">golden appel</item>
+        <item slot="28" amount="64">arrow</item>
+    </kit>
+    <kit name="red" parent="spawn">
+        <helmet color="993333" damage="-3000">leather helmet</helmet>
+        <chestplate damage="-3000">iron chestplate</chestplate>
+        <leggings color="993333" damage="-3000">leatheer leggings</leggings>
+        <boots damage="-3000">chainmail boots</boots>
+    </kit>
+    <kit name="blue" parent="spawn">
+        <helmet color="334CB2" damage="-3000">leather helmet</helmet>
+        <chestplate damage="-3000">iron chestplate</chestplate>
+        <leggings color="334CB2" damage="-3000">leather leggings</leggings>
+        <boots damage="-3000">chainmail boots</boots>
+    </kit>
 </kits>
 <spawns>
-	<spawn team="red" kit="red" yaw="0">
-		<cuboid min="-35,5,51" max="-32,5,54"/>
-	</spawn>	
-	<spawn team="blue" kit="blue" yaw="-180">
-		<cuboid min="-32,5,-15" max="-35,5,-18"/>
-	</spawn>
-	<default yaw="90">
-		<cylinder base="14,60,16" height="0" radius="2"/>
-	</default>
+    <spawn team="red" kit="red" yaw="0">
+        <cuboid min="-35,5,51" max="-32,5,54"/>
+    </spawn>	
+    <spawn team="blue" kit="blue" yaw="-180">
+        <cuboid min="-32,5,-15" max="-35,5,-18"/>
+    </spawn>
+    <default yaw="90">
+        <cylinder base="14,60,16" height="0" radius="2"/>
+    </default>
 </spawns>
 <filters>
-	<filter name="only-red">
-		<team>red</team>
-	</filter>
-	<filter name="only-blue">
-		<team>blue</team>
-	</filter>
+    <filter name="only-red">
+        <team>red</team>
+    </filter>
+    <filter name="only-blue">
+        <team>blue</team>
+    </filter>
 </filters>
 <regions>
-	<apply block="deny-blocks">
-		<rectangle min="-oo,-oo" max="oo,oo"/>
-	</apply>
-	<apply enter="only-red" message="You may not enter red teams spawn!">
-		<cuboid name="red-spawn" min="-31,5,53" max="-36,10,60"/>
-	</apply>
-	<apply enter="only-blue" message="You may not enter blue teams spawn!">
-		<cuboid name="blue-spawn" min="-36,5,-17" max="-31,10,-24"/>
-	</apply>
+    <apply block="deny-blocks">
+        <rectangle min="-oo,-oo" max="oo,oo"/>
+    </apply>
+    <apply enter="only-red" message="You may not enter red teams spawn!">
+        <cuboid name="red-spawn" min="-31,5,53" max="-36,10,60"/>
+    </apply>
+    <apply enter="only-blue" message="You may not enter blue teams spawn!">
+        <cuboid name="blue-spawn" min="-36,5,-17" max="-31,10,-24"/>
+    </apply>
 </regions>
 <score>
-	<box value="3" team="red" filter="only-red">
-    	<cuboid min="-16,14,-38" max="-13,14,-35"/>
-    	<cuboid min="-52,8,-50" max="-49,8,-47"/>
-	</box>
-	<box value="3" team="blue" filter="only-blue">
-		<cuboid min="-13,14,74" max="-16,14,71"/>
-		<cuboid min="-49,9,85" max="-52,8,83"/>
-	</box>
-	<time>600</time>
-	<limit>-1</limit>
+    <box value="3" team="red" filter="only-red">
+        <cuboid min="-16,14,-38" max="-13,14,-35"/>
+        <cuboid min="-52,8,-50" max="-49,8,-47"/>
+    </box>
+    <box value="3" team="blue" filter="only-blue">
+        <cuboid min="-13,14,74" max="-16,14,71"/>
+        <cuboid min="-49,9,85" max="-52,8,83"/>
+    </box>
+<score>
+    <time>600</time>
+    <limit>-1</limit>
 </score>
 <killreward>
-	<item>golden apple</item>
+    <item>golden apple</item>
 </killreward>
 <itemremove>
-	<item>leather helmet</item>
-	<item>iron chestplate</item>
-	<item>leather leggings</item>
-	<item>chainmail boots</item>
-	<item>cooked beef</item>
+    <item>leather helmet</item>
+    <item>iron chestplate</item>
+    <item>leather leggings</item>
+    <item>chainmail boots</item>
+    <item>cooked beef</item>
 </itemremove>
 <toolrepair>
-	<tool>iron sword</tool>
-	<tool>bow</tool>
+    <tool>iron sword</tool>
+    <tool>bow</tool>
 </toolrepair>
 </map>
