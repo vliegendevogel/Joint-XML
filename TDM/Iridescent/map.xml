@@ -1,168 +1,141 @@
 <?xml version="1.0"?>
 <map proto="1.3.3">
-	<name>Iridescent</name>
-	<version>1.0</version>
-	<objective>Be the team with the most amount of kills after 10 mins to win</objective>
-
-	<authors>
-		<author>MapleMint</author>
-	</authors>
-
-	<contributors>
-		<contributor contribution="XML">TheLuxeHD</contributor>
-		<contributor contribution="XML Revison">ExaBerries</contributor>
-	</contributors>
-
-	<teams>
-		<team color="blue" max="20" max-overfill="25">Blue Team</team>
-		<team color="gold" max="20" max-overfill="25">Orange Team</team>
-		<team color="lime" max="20" max-overfill="25">Lime Team</team>
-		<team color="magenta" max="20" max-overfill="25">Magenta Team</team>
-	</teams>
-
-	<kits>
-		<kit name="nullinv">
-			<item slot="0" amount="0">air</item>
-			<item slot="1" amount="0">air</item>
-			<item slot="2" amount="0">air</item>
-			<item slot="3" amount="0">air</item>
-			<item slot="4" amount="0">air</item>
-			<item slot="5" amount="0">air</item>
-			<item slot="6" amount="0">air</item>
-			<item slot="7" damage="0">air</item>
-			<item slot="8" amount="0">air</item>
-			<item slot="9" amount="0">air</item>
-			<item slot="10" amount="0">air</item>
-			<item slot="11" amount="0">air</item>
-			<item slot="12" amount="0">air</item>
-			<item slot="13" amount="0">air</item>
-			<item slot="14" amount="0">air</item>
-			<item slot="15" amount="0">air</item>
-			<item slot="16" amount="0">air</item>
-			<item slot="17" amount="0">air</item>
-			<item slot="18" amount="0">air</item>
-			<item slot="19" amount="0">air</item>
-			<item slot="20" amount="0">air</item>
-			<item slot="21" amount="0">air</item>
-			<item slot="22" amount="0">air</item>
-			<item slot="23" amount="0">air</item>
-			<item slot="24" amount="0">air</item>
-			<item slot="25" amount="0">air</item>
-			<item slot="26" amount="0">air</item>
-			<item slot="27" amount="0">air</item>
-			<item slot="28" amount="0">air</item>
-			<item slot="29" amount="0">air</item>
-			<item slot="30" amount="0">air</item>
-			<item slot="31" amount="0">air</item>
-			<item slot="32" amount="0">air</item>
-			<item slot="33" amount="0">air</item>
-			<item slot="34" amount="0">air</item>
-			<item slot="35" amount="0">air</item>
-		</kit>
-		<kit name="spawn">
-			<item slot="0" enchantment="durability:3">diamond sword</item>
-			<item slot="1" enchantment="arrow infinite:1;arrow knockback:1">bow</item>
-			<item slot="3" amount="64">steak</item>
-			<item slot="4" amount="2">ender pearl</item>
-			<item slot="28" amount="1">arrow</item>
-			<potion duration="oo" amplifier="1">speed</potion>
-			<helmet>golden helmet</helmet>
-			<boots>diamond boots</boots>
-		</kit>
-		<kit name="light-blue" parents="spawn">
-			<chestplate color="157dec">leather chestplate</chestplate>
-			<leggings color="157dec">leather leggings</leggings>
-		</kit>
-		<kit name="gold" parents="spawn">
-			<chestplate color="ffa500">leather chestplate</chestplate>
-			<leggings color="ffa500">leather leggings</leggings>
-		</kit>
-		<kit name="lime" parents="spawn">
-			<chestplate color="00ff00">leather chestplate</chestplate>
-			<leggings color="00ff00">leather leggings</leggings>
-		</kit>
- 
-		<kit name="magenta" parents="spawn"> 
-			<chestplate color="ff00ff">leather chestplate</chestplate>
-			<leggings color="ff00ff">leather leggings</leggings>
-		</kit>
-	</kits>
-
-	<score>
-		<time>12m</time>
-		<limit>-1</limit>
-	</score>
-
-	<filters>
-		<filter name="only-light-blue">
-			<team>Blue Team</team>	
-		</filter>
-		<filter name="only-lime">
-			<team>Lime Team</team>	
-		</filter>
-	</filters>
-
-	<spawns>
-		<spawn team="blue" kit="light-blue" yaw="-135">
-			<cuboid min ="-285,69,-210" max="-294,69,-201"/>
-			<point>-291.5,69,-203.5</point>
-		</spawn>
-		<spawn team="lime" kit="lime" yaw="-45">
-			<cuboid min ="-284,69,-289" max="-294,69,-299"/>
-			<point>-291.5,69,-296.5</point>
-		</spawn>
-		<spawn team="gold" kit="gold" yaw="45">
-			<cuboid min ="-205,69,-289" max="-195,69,-299"/>
-			<point>-198,69,-296</point>
-		</spawn>
-		<spawn team="magenta" kit="magenta" yaw="135">
-			<cuboid min ="-205,69,-210" max="-195,69,-200"/>
-			<point>-198,69,-203</point>
-		</spawn>
-	</spawns>
-
-	<regions>
-		<apply kit="nullinv">
-			<cuboid name="null-inv" min="-oo,-oo,-oo" max="oo,37,oo"/>
-		</apply>
-		<apply block="deny-all">
-			<cuboid name="playable" min="-296,37,-198" max="-193,oo,-301"/>
-		</apply>
-	</regions>
-
-	<playable>
-		<region name="playable"/>
-	</playable>
-
-	<portals>
-		<portal y="-128">
-			<region name="null-inv"/>
-		</portal>
-	</portals>
-
-	<disabledamge>
-		<damage>entity attack</damage>
-		<damage>fall</damage>
-	</disabledamge>
-
-	<killreward>
-		<item amount="2">ender pearl</item>
-	</killreward>
-
-	<timelock>on</timelock>
-
-	<toolrepair>
-		<tool>diamond sword</tool>
-		<tool>bow</tool>
-	</toolrepair>
-
-	<itemremove>
-		<item>arrow</item>
-		<item>golden helmet</item>
-		<item>leather chestplate</item>
-		<item>leather leggings</item>
-		<item>diamond boots</item>
-		<item>cooked beef</item>
-		<item>ender pearl</item>
-	</itemremove>
+<name>Iridescent</name>
+<version>1.0</version>
+<objective>Be the team with the most amount of kills after 10 mins to win</objective>
+<authors>
+    <author>MapleMint</author>
+</authors>
+<contributors>
+    <contributor contribution="XML">TheLuxeHD</contributor>
+    <contributor contribution="XML Revison">ExaBerries</contributor>
+</contributors>
+<teams>
+    <team color="blue" max="20" max-overfill="25">Blue Team</team>
+    <team color="gold" max="20" max-overfill="25">Orange Team</team>
+    <team color="lime" max="20" max-overfill="25">Lime Team</team>
+    <team color="magenta" max="20" max-overfill="25">Magenta Team</team>
+</teams>
+<kits>
+    <kit name="nullinv">
+        <item slot="0" amount="0">air</item>
+        <item slot="1" amount="0">air</item>
+        <item slot="2" amount="0">air</item>
+        <item slot="3" amount="0">air</item>
+        <item slot="4" amount="0">air</item>
+        <item slot="5" amount="0">air</item>
+        <item slot="6" amount="0">air</item>
+        <item slot="7" damage="0">air</item>
+        <item slot="8" amount="0">air</item>
+        <item slot="9" amount="0">air</item>
+        <item slot="10" amount="0">air</item>
+        <item slot="11" amount="0">air</item>
+        <item slot="12" amount="0">air</item>
+        <item slot="13" amount="0">air</item>
+        <item slot="14" amount="0">air</item>
+        <item slot="15" amount="0">air</item>
+        <item slot="16" amount="0">air</item>
+        <item slot="17" amount="0">air</item>
+        <item slot="18" amount="0">air</item>
+        <item slot="19" amount="0">air</item>
+        <item slot="20" amount="0">air</item>
+        <item slot="21" amount="0">air</item>
+        <item slot="22" amount="0">air</item>
+        <item slot="23" amount="0">air</item>
+        <item slot="24" amount="0">air</item>
+        <item slot="25" amount="0">air</item>
+        <item slot="26" amount="0">air</item>
+        <item slot="27" amount="0">air</item>
+        <item slot="28" amount="0">air</item>
+        <item slot="29" amount="0">air</item>
+        <item slot="30" amount="0">air</item>
+        <item slot="31" amount="0">air</item>
+        <item slot="32" amount="0">air</item>
+        <item slot="33" amount="0">air</item>
+        <item slot="34" amount="0">air</item>
+        <item slot="35" amount="0">air</item>
+    </kit>
+    <kit name="spawn">
+        <item slot="0" enchantment="durability:3">diamond sword</item>
+        <item slot="1" enchantment="arrow infinite:1;arrow knockback:1">bow</item>
+        <item slot="3" amount="64">steak</item>
+        <item slot="4" amount="2">ender pearl</item>
+        <item slot="28" amount="1">arrow</item>
+        <potion duration="oo" amplifier="1">speed</potion>
+        <helmet>gold helmet</helmet>
+        <boots>diamond boots</boots>
+    </kit>
+    <kit name="light-blue" parents="spawn">
+        <chestplate color="157dec">leather chestplate</chestplate>
+        <leggings color="157dec">leather leggings</leggings>
+    </kit>
+    <kit name="gold" parents="spawn">
+        <chestplate color="ffa500">leather chestplate</chestplate>
+        <leggings color="ffa500">leather leggings</leggings>
+    </kit>
+    <kit name="lime" parents="spawn">
+        <chestplate color="00ff00">leather chestplate</chestplate>
+        <leggings color="00ff00">leather leggings</leggings>
+    </kit>
+    <kit name="magenta" parents="spawn"> 
+        <chestplate color="ff00ff">leather chestplate</chestplate>
+        <leggings color="ff00ff">leather leggings</leggings>
+    </kit>
+</kits>
+<score>
+    <time>12m</time>
+    <limit>-1</limit>
+</score>
+<spawns>
+    <spawn team="blue" kit="light-blue" yaw="-135">
+        <cuboid min ="-285,69,-210" max="-294,69,-201"/>
+        <point>-291.5,69,-203.5</point>
+    </spawn>
+    <spawn team="lime" kit="lime" yaw="-45">
+        <cuboid min ="-284,69,-289" max="-294,69,-299"/>
+        <point>-291.5,69,-296.5</point>
+    </spawn>
+    <spawn team="orange" kit="gold" yaw="45">
+        <cuboid min ="-205,69,-289" max="-195,69,-299"/>
+        <point>-198,69,-296</point>
+    </spawn>
+    <spawn team="magenta" kit="magenta" yaw="135">
+        <cuboid min ="-205,69,-210" max="-195,69,-200"/>
+        <point>-198,69,-203</point>
+    </spawn>
+</spawns>
+<regions>
+    <apply kit="nullinv">
+        <cuboid name="null-inv" min="-oo,0,-oo" max="oo,37,oo"/>
+    </apply>
+    <apply block="deny-all">
+        <rectangle name="playable" min="-oo,-oo" max="oo,oo"/>
+    </apply>
+</regions>
+<portals>
+    <portal y="-128">
+        <region name="null-inv"/>
+    </portal>
+</portals>
+<disabledamge>
+    <damage>entity attack</damage>
+    <damage>fall</damage>
+</disabledamge>
+<killreward>
+    <item amount="2">ender pearl</item>
+    </killreward>
+<timelock>on</timelock>
+<toolrepair>
+    <tool>diamond sword</tool>
+    <tool>bow</tool>
+</toolrepair>
+<itemremove>
+    <item>arrow</item>
+    <item>golden helmet</item>
+    <item>leather chestplate</item>
+    <item>leather leggings</item>
+    <item>diamond boots</item>
+    <item>cooked beef</item>
+    <item>ender pearl</item>
+</itemremove>
 </map>
