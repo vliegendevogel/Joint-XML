@@ -1,37 +1,63 @@
-<?xml version="1.0"?>
+ <?xml version="1.0"?>
+<!-- Open the main map module and specify the PGM protocol version it was created for. -->
 <map proto="1.3.3">
+<!-- Set the maps name and version. -->
 <name>Frosty Shore</name>
-<version>1.1.3</version>
+<version>1.1.4</version>
+<!-- Specify the game objective. -->
 <objective>Break the enemy's team monument.</objective>
+<!-- Credit the author of the map. --> 
 <authors>
     <author>Ronan_Tempus</author> 
 </authors>
+<!-- Teams --> 
 <teams>
-    <team color="light purple" max="16">Pink Team</team>
-    <team color="green" max="16">Lime Team</team>
+    <team color="pink" max="16">Pink Team</team>
+    <team color="lime" max="16">Lime Team</team>
 </teams>
+<!-- Kill reward  --> 
 <killreward>
     <item amount="7">gold nugget</item>
 </killreward>
+<!-- Maxiumum build limit --> 
+<maxbuildheight>81</maxbuildheight>
+<!-- Pink team's spawn --> 
 <spawns>
     <spawn team="pink" kit="pink" yaw="90">
-        <cuboid name="pink-spawn" min="226,46,-20" max="233,46,2" />
+        <union>
+            <point yaw="24">226,46,-20</point>
+            <point yaw="156">226,46,2</point>
+        </union>
     </spawn> 
-    <spawn team="lime" kit="lime" yaw="-90">
-        <cuboid name="lime-spawn" min="29,46,36" max="32,46,58" />
+    <!-- Lime team's spawn --> 
+    <spawn team="lime" kit="lime">
+        <union>
+            <point yaw="-156">29,46,58</point>
+            <point yaw="-24">29,46,36</point>
+        </union>
     </spawn>
+    <!-- Observers' spawn --> 
     <default yaw="88">
-        <cuboid min="121,87,88" max="132,87,70" />
+        <union>
+            <point yaw="71">129,87,76</point>
+            <point yaw="107">129,87,82</point>
+            <point yaw="-107">124,87,82</point>
+            <point yaw="-71">124,87,76</point>
+        </union>
     </default>
 </spawns>
-<destroyables name="Monument" completion="100%" show-progress="true" materials="obsidian;emerald block;beacon">
+<!-- Destroyables --> 
+<destroyables name="Monument" completion="100%" show-progress="true" materials="obsidian;emerald_block;beacon">
+    <!-- The pink team's monument --> 
     <destroyable owner="pink">
         <cuboid min="214,55,-40" max="216,50,42" />
     </destroyable> 
+    <!-- The lime team's monument -->  
     <destroyable owner="lime">
         <cuboid min="39,55,-4" max="41,50,-6" />
     </destroyable>
 </destroyables>
+<!-- Prevents ice from melting naturally --> 
 <filters>
     <filter name="deny-icemelt">
         <not>
@@ -46,12 +72,16 @@
         </not>
     </filter>
 </filters>
+<!-- Specify regions --> 
 <regions>
-    <apply block="deny-all" message="Please don't break the spawns!">
+    <apply block="deny-players" message="Please don't break the spawns!">
+        <!-- Pink team's spawn area -->
         <cuboid name="pink-spawn-area" min="227,46,5" max="219,100,-23" /> 
+        <!-- Lime team's spawn area --> 
         <cuboid name="lime-spawn-area" min="27,46,33" max="36,100,61" />
     </apply>
-    <apply block="deny-all" message="Don't build this high!">
+    <!-- Build height limit --> 
+    <apply block="deny-blocks" message="Don't build this high!">
         <negative>
             <cuboid name="above-81" min="-oo,-oo,-oo" max="oo,82,oo" />
         </negative>
@@ -60,12 +90,13 @@
     <apply block="deny-icemelt">
         <cuboid name="playable" min="28,13,69" max="277,81,-31" />  
     </apply>
-    <apply block="deny-all"> 
+    <apply block="deny-world"> 
         <negative>
             <region name="playable" />
         </negative>
     </apply> 
 </regions>
+<!-- Spawnkit --> 
 <kits>
     <kit name="spawn">    
         <item slot="0">stone sword</item>
@@ -90,6 +121,7 @@
         <boots>chainmail boots</boots>
     </kit>
 </kits>
+<!-- Specify which items get repaired when dropped or when the player picks one up --> 
 <toolrepair>
     <tool>stone sword</tool> 
     <tool>diamond pickaxe</tool>
@@ -98,12 +130,13 @@
     <tool>bow</tool>
     <tool>arrow</tool>
 </toolrepair>
+<!-- Specify which items get removed when dropped --> 
 <itemremove>
     <item>leather chestplate</item>
     <item>chainmail leggings</item>
     <item>chainmail boots</item>
     <item>obsidian</item>
-    <item>emerald block</item>
+    <item>emerald_block</item>
     <item>beacon</item>
 </itemremove>
 </map>
